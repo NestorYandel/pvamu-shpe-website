@@ -1,0 +1,22 @@
+upcoming:
+  - title: General Body Meeting #1
+    date: 2025-11-20
+    time: 6:00 PM
+    location: Engineering Building Room 101
+    description: Kickoff meeting to introduce the organization, officers, and plans for the semester.
+    rsvp_link: ""
+
+  - title: Resume & LinkedIn Workshop
+    date: 2025-12-05
+    time: 5:30 PM
+    location: Virtual (Zoom)
+    description: Learn how to improve your resume and LinkedIn for internships.
+    rsvp_link: ""
+
+past:
+  - title: Fall Kickoff Social
+    date: 2025-09-10
+    time: 7:00 PM
+    location: Student Center Ballroom
+    description: Welcome social with games, snacks, and networking.
+    recap_link: ""
