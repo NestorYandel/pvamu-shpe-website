@@ -4,7 +4,16 @@ title: Officers
 permalink: /officers/
 ---
 
-# Our Officers
+# Meet Our Officers
 
-<!-- This section will later be auto-generated using _data/officers.yml -->
-Officer profiles coming soon.
+{% for officer in site.data.officers %}
+### {{ officer.name }}
+**Role:** {{ officer.role }}  
+**Major:** {{ officer.major }}  
+**Year:** {{ officer.year }}  
+**Email:** {{ officer.email }}  
+[LinkedIn]({{ officer.linkedin }})
+
+---
+
+{% endfor %}
