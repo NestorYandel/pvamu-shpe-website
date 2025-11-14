@@ -13,7 +13,9 @@
     <!-- Our custom styles -->
     <link rel="stylesheet" href="{{ '/assets/css/custom.css' | relative_url }}">
   </head>
-  <body>
+  
+  <body class="{% if page.hero %}home-page{% endif %}">
+
     <!-- HEADER / NAV -->
     <header id="site-header" class="site-header">
       <div class="container nav-inner">
