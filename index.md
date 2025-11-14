@@ -2,7 +2,7 @@
 layout: default
 title: Home
 hero: true
-hero_image: /assets/img/hero.jpg
+hero_image: /assets/img/hero.JPEG
 hero_title: PVAMU Society of Hispanic Professional Engineers
 hero_subtitle: Empowering Hispanic engineers through academic excellence, professional development, and leadership opportunities.
 hero_primary_text: Join Us
