@@ -4,7 +4,7 @@ title: Events
 permalink: /events/
 ---
 
-{% include nav.html %}
+
 
 # Upcoming Events
 
