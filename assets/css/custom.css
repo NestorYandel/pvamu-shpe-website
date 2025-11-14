@@ -35,6 +35,13 @@ body {
     padding 0.3s ease;
 }
 
+/* Non-home pages start with a solid header */
+body:not(.home-page) .site-header {
+  background: #ffffff;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.12);
+}
+
+/* When scrolled on ANY page, header becomes solid */
 .site-header.scrolled {
   background: #ffffff;
   box-shadow: 0 2px 8px rgba(15, 23, 42, 0.12);
@@ -47,16 +54,12 @@ body {
   justify-content: space-between;
 }
 
-/* Left side logo / text */
+/* Default logo + nav colors (dark) */
 .logo a {
   font-weight: 700;
   font-size: 1.1rem;
   letter-spacing: 0.03em;
   text-decoration: none;
-  color: #ffffff;
-}
-
-.site-header.scrolled .logo a {
   color: #111827;
 }
 
@@ -71,15 +74,17 @@ body {
   text-decoration: none;
   font-weight: 500;
   font-size: 0.95rem;
-  color: #ffffff;
-}
-
-.site-header.scrolled .nav-links a {
   color: #111827;
 }
 
 .nav-links a:hover {
   opacity: 0.85;
+}
+
+/* White nav text ONLY on homepage BEFORE scroll */
+.home-page .site-header:not(.scrolled) .logo a,
+.home-page .site-header:not(.scrolled) .nav-links a {
+  color: #ffffff;
 }
 
 /* ===== HERO SECTION (HOME) ===== */
@@ -96,7 +101,6 @@ body {
   text-transform: uppercase;
   margin-bottom: 1.8rem;
 }
-
 
 .hero {
   position: relative;
@@ -191,7 +195,6 @@ body {
   letter-spacing: 0.15em;
   opacity: 0.8;
 }
-
 
 /* Main content area under hero */
 .page-content {
