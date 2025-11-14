@@ -4,7 +4,7 @@ title: Join Us
 permalink: /join/
 ---
 
-{% include nav.html %}
+
 
 # Join Our Organization
 
