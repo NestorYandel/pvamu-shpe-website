@@ -3,9 +3,20 @@ layout: page
 title: Join Us
 permalink: /join/
 ---
+
 {% include nav.html %}
+
 # Join Our Organization
 
-Interested in joining? Fill out the form below.
+We welcome students from all majors interested in developing skills in:
+- Leadership  
+- Technical growth  
+- Professional development  
+- Community engagement  
 
-<!-- Later we'll embed your CRM form here -->
+## Join via Google Form
+
+Please fill out our interest form:
+
+<iframe src="YOUR_GOOGLE_FORM_EMBED_URL_HERE" width="100%" height="1200" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+
