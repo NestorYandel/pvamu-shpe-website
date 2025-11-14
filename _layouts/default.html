@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    {%- comment -%}
+    If you ever want to include the original Minima CSS, uncomment this:
+    <link rel="stylesheet" href="{{ '/assets/main.css' | relative_url }}">
+    {%- endcomment -%}
+
+    <!-- Our custom styles -->
+    <link rel="stylesheet" href="{{ '/assets/css/custom.css' | relative_url }}">
+  </head>
+  <body>
+    <!-- HEADER / NAV -->
+    <header id="site-header" class="site-header">
+      <div class="container nav-inner">
+        <div class="logo">
+          <a href="{{ '/' | relative_url }}">PV SHPE</a>
+        </div>
+        <nav>
+          <ul class="nav-links">
+            <li><a href="{{ '/' | relative_url }}">Home</a></li>
+            <li><a href="{{ '/about/' | relative_url }}">About</a></li>
+            <li><a href="{{ '/events/' | relative_url }}">Events</a></li>
+            <li><a href="{{ '/officers/' | relative_url }}">Officers</a></li>
+            <li><a href="{{ '/join/' | relative_url }}">Join</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- HERO (only for pages that turn it on) -->
+    {% if page.hero %}
+    <section
+      class="hero"
+      style="background-image: url('{{ page.hero_image | default: '/assets/img/hero.jpg' | relative_url }}');"
+    >
+      <div class="container hero-content">
+        <div class="hero-text">
+          <h1>{{ page.hero_title }}</h1>
+          <p>{{ page.hero_subtitle }}</p>
+          <div class="hero-buttons">
+            <a href="{{ page.hero_primary_link | default: '/join/' | relative_url }}" class="btn btn-primary">
+              {{ page.hero_primary_text | default: 'Join Us' }}
+            </a>
+            <a href="{{ page.hero_secondary_link | default: '/events/' | relative_url }}" class="btn btn-outline">
+              {{ page.hero_secondary_text | default: 'Learn More' }}
+            </a>
+          </div>
+        </div>
+        <div class="scroll-hint">Scroll Down ↓</div>
+      </div>
+    </section>
+    {% endif %}
+
+    <!-- MAIN CONTENT -->
+    <main class="page-content {% if page.hero %}page-content--with-hero{% endif %}">
+      <div class="container">
+        {{ content }}
+      </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+      <div class="container">
+        <p>&copy; {{ "now" | date: "%Y" }} {{ site.title }}. All rights reserved.</p>
+        <p>Official website of the Society of Hispanic Professional Engineers at Prairie View A&amp;M University.</p>
+      </div>
+    </footer>
+
+    <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
+  </body>
+</html>
