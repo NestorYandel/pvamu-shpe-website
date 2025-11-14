@@ -84,6 +84,20 @@ body {
 
 /* ===== HERO SECTION (HOME) ===== */
 
+.hero-logo {
+  max-width: 260px;
+  margin-bottom: 1rem;
+}
+
+.hero-tagline {
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 1.8rem;
+}
+
+
 .hero {
   position: relative;
   min-height: 80vh;
