@@ -1,0 +1,224 @@
+/* Basic reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  line-height: 1.5;
+  color: #111827;
+  background: #f9fafb;
+}
+
+/* Container for centered content */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* ===== HEADER / NAV ===== */
+
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  padding: 1.25rem 0;
+  background: transparent;
+  transition:
+    background-color 0.3s ease,
+    box-shadow 0.3s ease,
+    padding 0.3s ease;
+}
+
+.site-header.scrolled {
+  background: #ffffff;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.12);
+  padding: 0.75rem 0;
+}
+
+.nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Left side logo / text */
+.logo a {
+  font-weight: 700;
+  font-size: 1.1rem;
+  letter-spacing: 0.03em;
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.site-header.scrolled .logo a {
+  color: #111827;
+}
+
+/* Right side links */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.95rem;
+  color: #ffffff;
+}
+
+.site-header.scrolled .nav-links a {
+  color: #111827;
+}
+
+.nav-links a:hover {
+  opacity: 0.85;
+}
+
+/* ===== HERO SECTION (HOME) ===== */
+
+.hero {
+  position: relative;
+  min-height: 80vh;
+  background-size: cover;
+  background-position: center center;
+  display: flex;
+  align-items: center;
+  color: #ffffff;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(15, 23, 42, 0.75),
+    rgba(15, 23, 42, 0.4)
+  );
+}
+
+.hero-content {
+  position: relative;
+  padding-top: 6rem; /* space under fixed header */
+}
+
+.hero-text {
+  max-width: 600px;
+}
+
+.hero-text h1 {
+  font-size: clamp(2.4rem, 4vw, 3.4rem);
+  line-height: 1.1;
+  margin-bottom: 1rem;
+}
+
+.hero-text p {
+  font-size: 1.05rem;
+  max-width: 32rem;
+  margin-bottom: 1.5rem;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.7rem 1.6rem;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-decoration: none;
+  border: 2px solid transparent;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background: #7f1d1d; /* maroon-ish */
+  border-color: #7f1d1d;
+  color: #ffffff;
+}
+
+.btn-primary:hover {
+  background: #991b1b;
+  border-color: #991b1b;
+}
+
+.btn-outline {
+  background: transparent;
+  border-color: #ffffff;
+  color: #ffffff;
+}
+
+.btn-outline:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+/* Scroll hint */
+.scroll-hint {
+  position: absolute;
+  bottom: 2.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  opacity: 0.8;
+}
+
+/* Main content area under hero */
+.page-content {
+  padding-top: 100px; /* space for fixed header when there is no hero */
+  padding-bottom: 3rem;
+}
+
+/* On pages that have hero, we'll reduce the top padding via a class */
+.page-content--with-hero {
+  padding-top: 3rem;
+}
+
+/* Footer */
+.site-footer {
+  padding: 2rem 0;
+  background: #111827;
+  color: #d1d5db;
+  font-size: 0.9rem;
+  margin-top: 2rem;
+}
+
+.site-footer a {
+  color: #e5e7eb;
+  text-decoration: none;
+}
+
+.site-footer a:hover {
+  text-decoration: underline;
+}
+
+/* Make it look okay on phones too */
+@media (max-width: 768px) {
+  .nav-links {
+    gap: 1rem;
+    font-size: 0.9rem;
+  }
+
+  .hero-text h1 {
+    font-size: 2.1rem;
+  }
+
+  .hero-text p {
+    font-size: 0.95rem;
+  }
+}
