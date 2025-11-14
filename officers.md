@@ -3,7 +3,7 @@ layout: page
 title: Officers
 permalink: /officers/
 ---
-
+{% include nav.html %}
 # Meet Our Officers
 
 {% for officer in site.data.officers %}
