@@ -20,18 +20,21 @@
     <header id="site-header" class="site-header">
       <div class="container nav-inner">
         <div class="logo">
-          <a href="{{ '/' | relative_url }}">PV SHPE</a>
-        </div>
-        <nav>
-          <ul class="nav-links">
-            <li><a href="{{ '/' | relative_url }}">Home</a></li>
-            <li><a href="{{ '/about/' | relative_url }}">About</a></li>
-            <li><a href="{{ '/events/' | relative_url }}">Events</a></li>
-            <li><a href="{{ '/officers/' | relative_url }}">Officers</a></li>
-            <li><a href="{{ '/join/' | relative_url }}">Join</a></li>
-          </ul>
-        </nav>
-      </div>
+  <a href="{{ '/' | relative_url }}" class="logo-link">
+    <img
+      src="{{ '/assets/img/shpe-logo-nav.png' | relative_url }}"
+      alt="SHPE logo"
+      class="logo-mark"
+    >
+    <span class="logo-divider"></span>
+    <img
+      src="{{ '/assets/img/pvamu-logo-nav.png' | relative_url }}"
+      alt="PVAMU logo"
+      class="logo-mark"
+    >
+  </a>
+</div>
+
     </header>
 
     <!-- HERO (only for pages that turn it on) -->
