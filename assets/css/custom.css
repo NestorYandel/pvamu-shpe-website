@@ -87,6 +87,27 @@ body:not(.home-page) .site-header {
   color: #ffffff;
 }
 
+/* Logo block in nav: SHPE | PVAMU */
+.logo-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
+}
+
+.logo-mark {
+  height: 32px;
+  width: auto;
+  display: block;
+}
+
+.logo-divider {
+  width: 1px;
+  height: 32px;
+  background: #e5e7eb;
+}
+
+
 /* ===== HERO SECTION (HOME) ===== */
 
 .hero-logo {
