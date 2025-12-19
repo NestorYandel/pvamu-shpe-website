@@ -8,7 +8,7 @@ permalink: /join/
 
 # Join Our Organization
 
-We welcome students from all majors interested in developing skills in:
+We welcome students from STEM majors interested in developing skills in:
 - Leadership  
 - Technical growth  
 - Professional development  
