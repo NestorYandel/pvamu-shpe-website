@@ -253,6 +253,15 @@ body:not(.home-page) .site-header {
   text-decoration: underline;
 }
 
+
+.calendar-embed {
+  margin-top: 1.5rem;
+  border-radius: 14px;
+  overflow: hidden;
+  background: #ffffff;
+  box-shadow: 0 6px 20px rgba(15, 23, 42, 0.08);
+}
+
 /* Make it look okay on phones too */
 @media (max-width: 768px) {
   .nav-links {
