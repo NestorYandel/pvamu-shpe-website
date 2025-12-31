@@ -72,13 +72,45 @@
       </div>
     </main>
 
-    <!-- FOOTER -->
-    <footer class="site-footer">
-      <div class="container">
-        <p>&copy; {{ "now" | date: "%Y" }} {{ site.title }}. All rights reserved.</p>
-        <p>Official website of the Society of Hispanic Professional Engineers at Prairie View A&amp;M University.</p>
+   <footer class="site-footer">
+  <div class="container footer-grid">
+
+    <!-- Column 1: Logo + Social -->
+    <div class="footer-col footer-brand">
+      <div class="footer-logo">
+        <img src="{{ '/assets/img/SHPE-Logo-Solid.png' | relative_url }}" alt="SHPE" class="footer-shpe-logo">
+        <span class="footer-uni">Prairie View A&amp;M University</span>
       </div>
-    </footer>
+
+      <div class="footer-social">
+        <a href="https://instagram.com/YOUR_HANDLE" target="_blank" aria-label="Instagram">
+          <img src="{{ '/assets/img/instagram-icon.svg' | relative_url }}" alt="Instagram">
+        </a>
+      </div>
+    </div>
+
+    <!-- Column 2: Linktree -->
+    <div class="footer-col">
+      <h3 class="footer-title">Linktree</h3>
+      <ul class="footer-links">
+        <li><a href="https://linktr.ee/YOUR_LINKTREE" target="_blank">Visit our Linktree</a></li>
+      </ul>
+    </div>
+
+    <!-- Column 3: Contact -->
+    <div class="footer-col">
+      <h3 class="footer-title">Contact Us</h3>
+      <p class="footer-text">
+        <a href="mailto:pvamushpe@gmail.com">pvamushpe@gmail.com</a>
+      </p>
+    </div>
+
+  </div>
+
+  <div class="container footer-bottom">
+    <p>&copy; {{ "now" | date: "%Y" }} {{ site.title }}. All rights reserved.</p>
+  </div>
+</footer>
 
     <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
   </body>
