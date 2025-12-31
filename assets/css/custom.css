@@ -258,8 +258,8 @@ body:not(.home-page) .site-header {
 }
 
 .footer-shpe-logo {
-  height: 20px;
-  max-height: 20px;
+  height: 30px;
+  max-height: 30px;
   width: auto;
   display: block;
 }
@@ -269,18 +269,7 @@ body:not(.home-page) .site-header {
   color: #ffffff;
 }
 
-.footer-social {
-  margin-top: 1rem;
-}
 
-.footer-social img {
-  width: 26px;
-  opacity: 0.85;
-}
-
-.footer-social img:hover {
-  opacity: 1;
-}
 
 .footer-title {
   font-size: 1rem;
