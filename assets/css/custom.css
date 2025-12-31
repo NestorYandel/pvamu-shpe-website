@@ -258,7 +258,10 @@ body:not(.home-page) .site-header {
 }
 
 .footer-shpe-logo {
-  height: 36px;
+  height: 32px;
+  max-height: 32px;
+  width: auto;
+  display: block;
 }
 
 .footer-uni {
