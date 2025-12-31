@@ -258,8 +258,8 @@ body:not(.home-page) .site-header {
 }
 
 .footer-shpe-logo {
-  height: 32px;
-  max-height: 32px;
+  height: 20px;
+  max-height: 20px;
   width: auto;
   display: block;
 }
