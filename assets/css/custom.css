@@ -12,7 +12,7 @@ body {
   background: #f9fafb;
 }
 
-/* Container for centered content */
+/* Container for centered page content */
 .container {
   max-width: 1100px;
   margin: 0 auto;
@@ -27,12 +27,16 @@ body {
   left: 0;
   right: 0;
   z-index: 1000;
-  padding: 1.25rem 2rem;
   background: transparent;
   transition:
     background-color 0.3s ease,
     box-shadow 0.3s ease,
     padding 0.3s ease;
+}
+
+/* Full-width navbar wrapper */
+.nav-bar {
+  padding: 1.25rem 2.5rem; /* controls how close to the screen edge */
 }
 
 /* Non-home pages start with a solid header */
@@ -41,11 +45,15 @@ body:not(.home-page) .site-header {
   box-shadow: 0 2px 8px rgba(15, 23, 42, 0.12);
 }
 
-/* When scrolled on ANY page, header becomes solid */
+/* When scrolled on ANY page, header becomes solid and slightly shorter */
 .site-header.scrolled {
   background: #ffffff;
   box-shadow: 0 2px 8px rgba(15, 23, 42, 0.12);
-  padding: 0.75rem 0;
+}
+
+/* On scroll, reduce vertical padding but KEEP left/right padding */
+.site-header.scrolled .nav-bar {
+  padding: 0.75rem 2.5rem;
 }
 
 .nav-inner {
@@ -54,26 +62,37 @@ body:not(.home-page) .site-header {
   justify-content: space-between;
 }
 
-/* Default logo + nav colors (dark) */
-.logo a {
-  font-weight: 700;
-  font-size: 1.1rem;
-  letter-spacing: 0.03em;
+/* Logo block: SHPE | PVAMU */
+.logo-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.9rem;
   text-decoration: none;
-  color: #111827;
 }
 
-/* Right side links */
+.logo-mark {
+  height: 42px; /* bigger logo */
+  width: auto;
+  display: block;
+}
+
+.logo-divider {
+  width: 1px;
+  height: 42px; /* match logo height */
+  background: rgba(17, 24, 39, 0.25);
+}
+
+/* Nav links */
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 1.5rem;
+  gap: 2rem; /* same distance between each link */
 }
 
 .nav-links a {
   text-decoration: none;
-  font-weight: 500;
-  font-size: 0.95rem;
+  font-weight: 600;
+  font-size: 1.1rem; /* bigger links */
   color: #111827;
 }
 
@@ -82,46 +101,16 @@ body:not(.home-page) .site-header {
 }
 
 /* White nav text ONLY on homepage BEFORE scroll */
-.home-page .site-header:not(.scrolled) .logo a,
 .home-page .site-header:not(.scrolled) .nav-links a {
   color: #ffffff;
 }
 
-/* Logo block in nav: SHPE | PVAMU */
-.logo-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.75rem;
-  text-decoration: none;
+/* If you ever add text near the logo, this keeps it white on homepage too */
+.home-page .site-header:not(.scrolled) .logo a {
+  color: #ffffff;
 }
-
-.logo-mark {
-  height: 32px;
-  width: auto;
-  display: block;
-}
-
-.logo-divider {
-  width: 1px;
-  height: 32px;
-  background: #e5e7eb;
-}
-
 
 /* ===== HERO SECTION (HOME) ===== */
-
-.hero-logo {
-  max-width: 260px;
-  margin-bottom: 1rem;
-}
-
-.hero-tagline {
-  font-size: 1.1rem;
-  font-weight: 600;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  margin-bottom: 1.8rem;
-}
 
 .hero {
   position: relative;
@@ -165,13 +154,6 @@ body:not(.home-page) .site-header {
   margin-bottom: 1.8rem;
 }
 
-
-.hero-text p {
-  font-size: 1.05rem;
-  max-width: 32rem;
-  margin-bottom: 1.5rem;
-}
-
 .hero-buttons {
   display: flex;
   gap: 1rem;
@@ -191,17 +173,6 @@ body:not(.home-page) .site-header {
   cursor: pointer;
 }
 
-.btn-primary {
-  background: #7f1d1d; /* maroon-ish */
-  border-color: #7f1d1d;
-  color: #ffffff;
-}
-
-.btn-primary:hover {
-  background: #991b1b;
-  border-color: #991b1b;
-}
-
 .btn-outline {
   background: transparent;
   border-color: #ffffff;
@@ -212,25 +183,12 @@ body:not(.home-page) .site-header {
   background: rgba(255, 255, 255, 0.08);
 }
 
-/* Scroll hint */
-.scroll-hint {
-  position: absolute;
-  bottom: 1.5rem;
-  left: 50%;
-  transform: translateX(-50%);
-  font-size: 0.8rem;
-  text-transform: uppercase;
-  letter-spacing: 0.15em;
-  opacity: 0.8;
-}
-
 /* Main content area under hero */
 .page-content {
-  padding-top: 100px; /* space for fixed header when there is no hero */
+  padding-top: 110px; /* space for fixed header when there is no hero */
   padding-bottom: 3rem;
 }
 
-/* On pages that have hero, we'll reduce the top padding via a class */
 .page-content--with-hero {
   padding-top: 3rem;
 }
@@ -245,7 +203,7 @@ body:not(.home-page) .site-header {
   box-shadow: 0 10px 28px rgba(15, 23, 42, 0.12);
 }
 
-/* ===== NEW FOOTER STYLE ===== */
+/* ===== FOOTER ===== */
 
 .site-footer {
   background: linear-gradient(180deg, #0b1220, #020617);
@@ -268,8 +226,8 @@ body:not(.home-page) .site-header {
 }
 
 .footer-shpe-logo {
-  height: 50px;
-  max-height: 50px;
+  height: 32px;
+  max-height: 32px;
   width: auto;
   display: block;
 }
@@ -278,8 +236,6 @@ body:not(.home-page) .site-header {
   font-weight: 600;
   color: #ffffff;
 }
-
-
 
 .footer-title {
   font-size: 1rem;
@@ -307,6 +263,7 @@ body:not(.home-page) .site-header {
 .footer-text a:hover {
   text-decoration: underline;
 }
+
 .footer-linktree {
   text-align: center;
 }
@@ -322,22 +279,43 @@ body:not(.home-page) .site-header {
   border-radius: 999px;
 }
 
-
-
-/* Mobile */
+/* ===== MOBILE ===== */
 @media (max-width: 768px) {
+  .nav-bar {
+    padding: 1rem 1.25rem;
+  }
+
+  .site-header.scrolled .nav-bar {
+    padding: 0.75rem 1.25rem;
+  }
+
+  .logo-mark {
+    height: 34px;
+  }
+
+  .logo-divider {
+    height: 34px;
+  }
+
+  .nav-links {
+    gap: 1.1rem;
+  }
+
+  .nav-links a {
+    font-size: 0.95rem;
+  }
+
   .footer-grid {
     grid-template-columns: 1fr;
     gap: 2rem;
   }
-}
-
 
   .hero-text h1 {
     font-size: 2.1rem;
   }
 
-  .hero-text p {
-    font-size: 0.95rem;
+  .hero-subtitle {
+    font-size: 1.1rem;
   }
 }
+
