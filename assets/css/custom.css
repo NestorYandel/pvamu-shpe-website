@@ -297,13 +297,22 @@ body:not(.home-page) .site-header {
 .footer-text a:hover {
   text-decoration: underline;
 }
-
-.footer-bottom {
-  padding-top: 1.2rem;
+.footer-linktree {
   text-align: center;
-  font-size: 0.85rem;
-  color: rgba(203, 213, 245, 0.7);
 }
+
+.footer-linktree .footer-links {
+  margin-top: 1rem;
+}
+
+.footer-linktree a {
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+  border: 1px solid rgba(203, 213, 245, 0.35);
+  border-radius: 999px;
+}
+
+
 
 /* Mobile */
 @media (max-width: 768px) {
