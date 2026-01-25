@@ -15,7 +15,7 @@ hero_secondary_link: /about/
 
 <section class="events-intro">
   <div class="container events-intro-content">
-    <h2 class="events-title">Upcoming Events</h2>
+    <h2 class="events-title">Event Calendar</h2>
     <p class="events-desc">
       Join us for workshops, socials, and career-focused events throughout the
       semester. Check the calendar for dates, times, and locations.
