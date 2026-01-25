@@ -14,9 +14,9 @@
     <link rel="stylesheet" href="{{ '/assets/css/custom.css' | relative_url }}">
   </head>
   <body class="{% if page.hero %}home-page{% endif %}">
-
-    <!-- HEADER / NAV -->
-    <header id="site-header" class="site-header">
+    <div class="site-shell">
+      <!-- HEADER / NAV -->
+      <header id="site-header" class="site-header">
       <div class="nav-bar">
   <div class="nav-inner">
         <div class="logo">
@@ -43,37 +43,37 @@
           </ul>
         </nav>
       </div>
-    </header>
+      </header>
 
     <!-- HERO (only for pages that turn it on) -->
-    {% if page.hero %}
-    <section
-      class="hero"
-      style="background-image: url('{{ page.hero_image | default: '/assets/img/hero.jpg' | relative_url }}');"
-    >
-      <div class="container hero-content">
-        <div class="hero-text">
-          <h1>{{ page.hero_title }}</h1>
-          <h2 class="hero-subtitle">{{ page.hero_subtitle }}</h2>
-          <div class="hero-buttons">
-            <a href="{{ page.hero_secondary_link | default: '/about/' | relative_url }}" class="btn btn-outline">
-              {{ page.hero_secondary_text | default: 'Learn More' }}
-            </a>
+      {% if page.hero %}
+      <section
+        class="hero"
+        style="background-image: url('{{ page.hero_image | default: '/assets/img/hero.jpg' | relative_url }}');"
+      >
+        <div class="container hero-content">
+          <div class="hero-text">
+            <h1>{{ page.hero_title }}</h1>
+            <h2 class="hero-subtitle">{{ page.hero_subtitle }}</h2>
+            <div class="hero-buttons">
+              <a href="{{ page.hero_secondary_link | default: '/about/' | relative_url }}" class="btn btn-outline">
+                {{ page.hero_secondary_text | default: 'Learn More' }}
+              </a>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
-    {% endif %}
+      </section>
+      {% endif %}
 
-    <!-- MAIN CONTENT -->
-    <main class="page-content {% if page.hero %}page-content--with-hero{% endif %}">
-      <div class="container">
-        {{ content }}
-      </div>
-    </main>
+      <!-- MAIN CONTENT -->
+      <main class="page-content {% if page.hero %}page-content--with-hero{% endif %}">
+        <div class="container">
+          {{ content }}
+        </div>
+      </main>
 
-   <footer class="site-footer">
-  <div class="container footer-grid">
+     <footer class="site-footer">
+    <div class="container footer-grid">
 
     <!-- Column 1: Logo  -->
     <div class="footer-col footer-brand">
@@ -103,8 +103,9 @@
 
   </div>
 
-  
-</footer>
+    
+  </footer>
+    </div>
 
     <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
   </body>
