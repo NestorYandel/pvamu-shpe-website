@@ -278,14 +278,14 @@ body:not(.home-page) .site-header {
   font-weight: 700;
   letter-spacing: 0.15em;
   text-transform: uppercase;
-  color: #eaaa00;
+  color: #582c83;
   margin-bottom: 0.75rem;
 }
 
 .connect-heading {
   font-size: clamp(2.4rem, 3.6vw, 3.4rem);
   font-weight: 800;
-  color: #582c83;
+  color: #000000;
   margin-bottom: 2rem;
 }
 
