@@ -13,7 +13,7 @@ hero_secondary_link: /about/
 
 
 
-<h2>Upcoming Events</h2>
+<h2 style="text-align:center;">Upcoming Events</h2>
 
 <div class="calendar-embed">
   <iframe
