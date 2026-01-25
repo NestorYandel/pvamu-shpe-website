@@ -20,7 +20,7 @@ hero_secondary_link: /about/
     src="https://calendar.google.com/calendar/embed?src=0d5dd6914ea815453a697f4f5827508582c9e97241e096314098fc7f47aca72f%40group.calendar.google.com&ctz=America%2FChicago"
     style="border: 0"
     width="100%"
-    height="800"
+    height="700"
     frameborder="0"
     scrolling="no">
   </iframe>
