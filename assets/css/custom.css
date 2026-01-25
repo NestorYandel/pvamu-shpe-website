@@ -86,8 +86,9 @@ body:not(.home-page) .site-header {
 }
 
 .logo-mark {
-  height: 42px; /* bigger logo */
+  height: 48px;
   width: auto;
+  object-fit: contain;
   display: block;
 }
 
@@ -334,7 +335,7 @@ body:not(.home-page) .site-header {
   }
 
   .logo-mark {
-    height: 34px;
+    height: 38px;
   }
 
   .logo-divider {
