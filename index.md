@@ -25,3 +25,5 @@ hero_secondary_link: /about/
     scrolling="no">
   </iframe>
 </div>
+
+{% include connect-section.html %}
