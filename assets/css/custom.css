@@ -418,20 +418,6 @@ body:not(.home-page) .site-header {
   line-height: 1.6;
 }
 
-.footer-social {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.6rem;
-  color: #ffffff;
-  text-decoration: none;
-}
-
-.footer-social svg {
-  width: 22px;
-  height: 22px;
-  fill: currentColor;
-}
-
 .footer-heading {
   font-size: 0.95rem;
   font-weight: 700;
