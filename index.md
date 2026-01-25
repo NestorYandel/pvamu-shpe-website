@@ -14,17 +14,12 @@ hero_secondary_link: /about/
 
 
 <section class="events-intro">
-  <div class="container events-intro-grid">
-    <div class="events-intro-left">
-      <span class="events-label">UPCOMING EVENTS</span>
-      <h2 class="events-heading">Stay Connected</h2>
-    </div>
-    <div class="events-intro-right">
-      <p class="events-highlight">
-        Join us for workshops, socials, and career-focused events throughout the
-        semester. Check the calendar for dates, times, and locations.
-      </p>
-    </div>
+  <div class="container events-intro-content">
+    <h2 class="events-title">Upcoming Events</h2>
+    <p class="events-desc">
+      Join us for workshops, socials, and career-focused events throughout the
+      semester. Check the calendar for dates, times, and locations.
+    </p>
   </div>
 </section>
 

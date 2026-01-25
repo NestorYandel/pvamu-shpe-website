@@ -211,43 +211,28 @@ body:not(.home-page) .site-header {
 
 /* Calendar */
 .events-intro {
-  padding: 3rem 0 2rem;
+  padding: 3rem 0 2.5rem;
 }
 
-.events-intro-grid {
+.events-intro-content {
+  text-align: center;
   display: grid;
-  grid-template-columns: minmax(0, 40%) minmax(0, 60%);
-  gap: 3rem;
-  align-items: start;
+  gap: 0.75rem;
+  justify-items: center;
 }
 
-.events-label {
-  display: inline-block;
-  font-size: 0.75rem;
-  font-weight: 700;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: #582c83;
-  margin-bottom: 0.65rem;
-}
-
-.events-heading {
+.events-title {
   font-size: clamp(2rem, 3.4vw, 2.9rem);
   font-weight: 700;
   color: #000000;
   margin: 0;
 }
 
-.events-highlight {
-  display: inline-block;
-  max-width: 34rem;
-  background: #f4effa;
-  border: 1px solid #e7dbf5;
-  color: #1f2937;
-  padding: 1.15rem 1.35rem;
-  border-radius: 14px;
+.events-desc {
+  max-width: 40rem;
+  color: #582c83;
   line-height: 1.6;
-  font-size: 1rem;
+  margin: 0;
 }
 
 .calendar-embed {
@@ -367,12 +352,11 @@ body:not(.home-page) .site-header {
 /* ===== MOBILE ===== */
 @media (max-width: 768px) {
   .events-intro {
-    padding: 2.25rem 0 1.5rem;
+    padding: 2.25rem 0 2rem;
   }
 
-  .events-intro-grid {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
+  .events-intro-content {
+    gap: 0.6rem;
   }
 
   .nav-bar {
