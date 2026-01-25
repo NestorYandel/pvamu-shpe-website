@@ -156,6 +156,7 @@ body:not(.home-page) .site-header {
 
 .hero-text {
   max-width: 600px;
+  text-align: center;
 }
 
 .hero-text h1 {
@@ -174,6 +175,7 @@ body:not(.home-page) .site-header {
   display: flex;
   gap: 1rem;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .btn {
@@ -197,6 +199,16 @@ body:not(.home-page) .site-header {
 
 .btn-outline:hover {
   background: rgba(255, 255, 255, 0.08);
+}
+
+.hero .btn {
+  background: #582c83;
+  color: #ffffff;
+  border-color: transparent;
+}
+
+.hero .btn:hover {
+  background: #4b2470;
 }
 
 /* Main content area under hero */
@@ -501,4 +513,3 @@ body:not(.home-page) .site-header {
     grid-template-columns: 1fr;
   }
 }
-
