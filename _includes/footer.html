@@ -1,0 +1,61 @@
+<footer class="footer-shell">
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-col footer-brand">
+        <img
+          src="{{ '/assets/images/footer-logo.png' | relative_url }}"
+          alt="SHPE PVAMU footer logo"
+          class="footer-logo"
+        >
+        <p class="footer-description">
+          Empowering members through leadership, community, and opportunity.
+        </p>
+        <a
+          class="footer-social"
+          href="https://instagram.com/shpe_pvamu"
+          target="_blank"
+          rel="noopener"
+          aria-label="SHPE PVAMU on Instagram"
+        >
+          <svg class="footer-social-icon" viewBox="0 0 24 24" role="img" aria-hidden="true">
+            <path d="M7 3h10a4 4 0 0 1 4 4v10a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V7a4 4 0 0 1 4-4zm10 2H7a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2zm-5 3.5a4.5 4.5 0 1 1 0 9 4.5 4.5 0 0 1 0-9zm0 2a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM17.5 6a1.25 1.25 0 1 1 0 2.5 1.25 1.25 0 0 1 0-2.5z"/>
+          </svg>
+          <span class="footer-social-text">Instagram</span>
+        </a>
+      </div>
+
+      <div class="footer-col">
+        <h3 class="footer-heading">Quick Links</h3>
+        <ul class="footer-links">
+          <li><a href="{{ '/' | relative_url }}">Home</a></li>
+          <li><a href="{{ '/about/' | relative_url }}">About</a></li>
+          <li><a href="{{ '/get-involved/' | relative_url }}">Get Involved</a></li>
+          <li><a href="{{ '/sponsorshpe/' | relative_url }}">SponsorSHPE</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h3 class="footer-heading">Contact</h3>
+        <ul class="footer-links">
+          <li><a href="mailto:shpe@pvamu.edu">shpe@pvamu.edu</a></li>
+          <li><a href="https://linktr.ee/shpe_pvamu" target="_blank" rel="noopener">Linktree</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h3 class="footer-heading">Resources</h3>
+        <ul class="footer-links">
+          <li><a href="https://example.com/shpe-national" target="_blank" rel="noopener">SHPE National</a></li>
+          <li><a href="https://example.com/scholarshpe" target="_blank" rel="noopener">ScholarSHPE</a></li>
+          <li><a href="https://example.com/career-resources" target="_blank" rel="noopener">Career Resources</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-divider"></div>
+
+    <div class="footer-bottom">
+      <p class="footer-copyright">&copy; {{ site.time | date: "%Y" }} SHPE PVAMU. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
