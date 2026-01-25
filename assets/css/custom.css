@@ -213,8 +213,7 @@ body:not(.home-page) .site-header {
 #connect.connect-section {
   width: 100vw;
   margin-left: calc(50% - 50vw);
-  background: #f7f4ef;
-  border-top: 2px solid #4b1d5b;
+  border-top: 2px solid #582c83;
   padding: 100px 0;
 }
 
@@ -237,14 +236,14 @@ body:not(.home-page) .site-header {
   font-weight: 700;
   letter-spacing: 0.15em;
   text-transform: uppercase;
-  color: #c99b2e;
+  color: #eaaa00;
   margin-bottom: 0.75rem;
 }
 
 .connect-heading {
   font-size: clamp(2.4rem, 3.6vw, 3.4rem);
   font-weight: 800;
-  color: #4b1d5b;
+  color: #582c83;
   margin-bottom: 2rem;
 }
 
@@ -263,7 +262,7 @@ body:not(.home-page) .site-header {
   width: 42px;
   height: 42px;
   border-radius: 12px;
-  background: rgba(75, 29, 91, 0.08);
+  background: rgba(88, 44, 131, 0.08);
   display: grid;
   place-items: center;
   flex-shrink: 0;
@@ -272,7 +271,7 @@ body:not(.home-page) .site-header {
 .connect-icon svg {
   width: 22px;
   height: 22px;
-  fill: #4b1d5b;
+  fill: #582c83;
 }
 
 .connect-text {
@@ -282,7 +281,7 @@ body:not(.home-page) .site-header {
 
 .connect-title {
   font-weight: 700;
-  color: #2b1d33;
+  color: #582c83;
 }
 
 .connect-value {
@@ -292,7 +291,7 @@ body:not(.home-page) .site-header {
 }
 
 .connect-value:hover {
-  color: #4b1d5b;
+  color: #582c83;
 }
 
 .connect-map-card {
