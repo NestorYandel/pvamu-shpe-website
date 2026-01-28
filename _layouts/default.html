@@ -20,12 +20,21 @@
       <div class="nav-bar">
   <div class="nav-inner">
         <div class="logo">
-          <a href="{{ '/' | relative_url }}" class="logo-link">
-            <img
-              src="{{ '/assets/img/SHPEPVAMU_Horizontal.png' | relative_url }}"
-              alt="SHPE PVAMU logo"
-              class="logo-mark"
-            >
+          <a href="{{ '/' | relative_url }}" class="logo-link" aria-label="SHPE PVAMU logo">
+            <span class="logo-swap">
+              <img
+                src="{{ '/assets/img/SHPE-Logo_Transparent.png' | relative_url }}"
+                alt=""
+                aria-hidden="true"
+                class="logo-mark logo-default"
+              >
+              <img
+                src="{{ '/assets/img/SHPEPVAMU_Horizontal.png' | relative_url }}"
+                alt=""
+                aria-hidden="true"
+                class="logo-mark logo-scrolled"
+              >
+            </span>
           </a>
         </div>
         <nav>
