@@ -19,7 +19,5 @@ permalink: /about/
     </div>
   </section>
 
-  <section class="about-body">
-    <p>Write about your mission, purpose, values, and what your organization does.</p>
-  </section>
+  
 </div>
