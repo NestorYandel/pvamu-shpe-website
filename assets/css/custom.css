@@ -246,6 +246,10 @@ body:not(.home-page) .site-header {
   padding-top: 3rem;
 }
 
+.home-page .page-content {
+  padding-bottom: 0;
+}
+
 /* Calendar */
 .events-intro {
   padding: 3rem 0 2.5rem;
