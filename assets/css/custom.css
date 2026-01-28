@@ -297,7 +297,7 @@ body:not(.home-page) .site-header {
 #connect.connect-section {
   width: 100vw;
   margin-left: calc(50% - 50vw);
-  background: #ffffff;
+  background: #fbf7f0;
   padding: 100px 0;
 }
 
