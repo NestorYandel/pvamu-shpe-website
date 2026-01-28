@@ -19,5 +19,7 @@ permalink: /about/
     </div>
   </section>
 
-  
+  {% include about-history.html %}
 </div>
+
+<script src="{{ '/assets/js/gallery.js' | relative_url }}" defer></script>
