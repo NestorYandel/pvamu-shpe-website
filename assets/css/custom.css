@@ -251,35 +251,57 @@ body:not(.home-page) .site-header {
   padding-bottom: 0;
 }
 
-/* Calendar */
+/* ===== EVENT CALENDAR ===== */
+
 .events-intro {
-  padding: 3rem 0 2.5rem;
+  padding: 4rem 0 2.5rem;
 }
 
 .events-intro-content {
   text-align: center;
   display: grid;
-  gap: 0.75rem;
+  gap: 0.6rem;
   justify-items: center;
   max-width: 70ch;
   margin: 0 auto;
 }
 
+.events-label {
+  display: inline-block;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #eaaa00;
+  margin-bottom: 0.25rem;
+}
+
 .events-title {
   font-size: clamp(2rem, 3.4vw, 2.9rem);
-  font-weight: 700;
-  color:#582c83 ;
+  font-weight: 800;
+  color: #582c83;
   margin: 0;
 }
 
+.events-title::after {
+  content: "";
+  display: block;
+  width: 48px;
+  height: 3px;
+  background: #eaaa00;
+  margin: 0.6rem auto 0;
+  border-radius: 2px;
+}
+
 .events-desc {
-  color: #000000;
+  color: #1f2937;
   line-height: 1.6;
   margin: 0 auto;
+  font-size: 1.05rem;
 }
 
 .calendar-embed {
-  margin: 3rem auto;
+  margin: 2rem auto 3rem;
   max-width: 1900px;
   border-radius: 16px;
   overflow: hidden;
@@ -291,6 +313,119 @@ body:not(.home-page) .site-header {
   display: block;
   width: 100%;
   height: 700px;
+}
+
+/* ===== OFFICER SPOTLIGHT ===== */
+
+.officers-section {
+  padding: 5rem 0;
+  background: #ffffff;
+}
+
+.officers-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.officers-label {
+  display: inline-block;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #eaaa00;
+  margin-bottom: 0.6rem;
+}
+
+.officers-heading {
+  font-size: clamp(2rem, 3.4vw, 2.9rem);
+  font-weight: 800;
+  color: #582c83;
+  margin: 0;
+}
+
+.officers-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
+.officer-card {
+  background: #ffffff;
+  border: 1px solid rgba(88, 44, 131, 0.1);
+  border-radius: 16px;
+  padding: 2rem 1.25rem 1.5rem;
+  text-align: center;
+  box-shadow: 0 4px 16px rgba(15, 23, 42, 0.07);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.officer-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 28px rgba(15, 23, 42, 0.13);
+}
+
+.officer-photo {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  background: #582c83;
+  display: grid;
+  place-items: center;
+  margin: 0 auto 1.25rem;
+  overflow: hidden;
+}
+
+.officer-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.officer-initials {
+  color: #ffffff;
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 0.02em;
+  user-select: none;
+}
+
+.officer-info {
+  display: grid;
+  gap: 0.3rem;
+}
+
+.officer-name {
+  font-weight: 700;
+  font-size: 1rem;
+  color: #111827;
+  margin: 0;
+}
+
+.officer-title {
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #eaaa00;
+  margin: 0;
+}
+
+.officer-linkedin {
+  display: inline-block;
+  margin-top: 0.5rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #582c83;
+  text-decoration: none;
+}
+
+.officer-linkedin:hover {
+  text-decoration: underline;
 }
 
 /* ===== CONNECT SECTION ===== */
@@ -587,6 +722,10 @@ body:not(.home-page) .site-header {
 
 /* ===== MOBILE ===== */
 @media (max-width: 768px) {
+  .officers-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
   .events-intro {
     padding: 2.25rem 0 2rem;
   }
@@ -652,6 +791,12 @@ body:not(.home-page) .site-header {
 
   .about-page .about-history-title {
     font-size: clamp(2.2rem, 8vw, 3rem);
+  }
+}
+
+@media (max-width: 480px) {
+  .officers-grid {
+    grid-template-columns: 1fr;
   }
 }
 

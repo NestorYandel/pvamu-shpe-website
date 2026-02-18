@@ -1,0 +1,52 @@
+# Officer data for the home page spotlight section.
+# - image: leave empty ("") to show initials placeholder; fill in path when photo is ready
+#           e.g. /assets/img/officers/jane-doe.jpg
+# - linkedin: leave empty ("") to hide the link
+
+- name: "President Name"
+  title: "President"
+  initials: "PN"
+  image: ""
+  linkedin: ""
+
+- name: "Vice President"
+  title: "Vice President"
+  initials: "VP"
+  image: ""
+  linkedin: ""
+
+- name: "Secretary"
+  title: "Secretary"
+  initials: "SE"
+  image: ""
+  linkedin: ""
+
+- name: "Treasurer"
+  title: "Treasurer"
+  initials: "TR"
+  image: ""
+  linkedin: ""
+
+- name: "Historian"
+  title: "Historian"
+  initials: "HI"
+  image: ""
+  linkedin: ""
+
+- name: "Webmaster"
+  title: "Webmaster"
+  initials: "WM"
+  image: ""
+  linkedin: ""
+
+- name: "Events Coordinator"
+  title: "Events Coordinator"
+  initials: "EC"
+  image: ""
+  linkedin: ""
+
+- name: "Outreach Chair"
+  title: "Outreach Chair"
+  initials: "OC"
+  image: ""
+  linkedin: ""

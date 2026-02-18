@@ -1,0 +1,29 @@
+<section class="officers-section">
+  <div class="container">
+    <div class="officers-header">
+      <span class="officers-label">OUR LEADERSHIP</span>
+      <h2 class="officers-heading">Meet the Team</h2>
+    </div>
+
+    <div class="officers-grid">
+      {% for officer in site.data.officers %}
+      <div class="officer-card">
+        <div class="officer-photo">
+          {% if officer.image and officer.image != "" %}
+            <img src="{{ officer.image | relative_url }}" alt="{{ officer.name }}">
+          {% else %}
+            <span class="officer-initials" aria-hidden="true">{{ officer.initials }}</span>
+          {% endif %}
+        </div>
+        <div class="officer-info">
+          <p class="officer-name">{{ officer.name }}</p>
+          <p class="officer-title">{{ officer.title }}</p>
+          {% if officer.linkedin and officer.linkedin != "" %}
+            <a class="officer-linkedin" href="{{ officer.linkedin }}" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+          {% endif %}
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
