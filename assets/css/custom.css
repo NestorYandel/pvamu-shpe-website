@@ -34,6 +34,10 @@
   --heading-section: clamp(2rem, 3.4vw, 2.9rem);
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 /* Basic reset */
 * {
   box-sizing: border-box;
@@ -734,11 +738,196 @@ body:not(.home-page) .site-header {
   right: 12px;
 }
 
+/* ===== SCROLL ANIMATIONS ===== */
+
+[data-animate] {
+  opacity: 0;
+  transform: translateY(28px);
+  transition:
+    opacity 0.6s ease,
+    transform 0.6s ease;
+  transition-delay: var(--delay, 0s);
+}
+
+[data-animate].is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ===== ABOUT: MISSION & VISION ===== */
+
+.about-mission {
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  background: var(--color-navy);
+  padding: 90px 0;
+}
+
+.about-mission-inner {
+  max-width: var(--container-wide);
+  margin: 0 auto;
+  padding: 0 clamp(16px, 4vw, 64px);
+  display: grid;
+  grid-template-columns: 1fr 1px 1fr;
+  gap: 0;
+  align-items: start;
+}
+
+.about-mission-block {
+  padding: 0 3.5rem;
+}
+
+.about-mission-block:first-child {
+  padding-left: 0;
+}
+
+.about-mission-block:last-child {
+  padding-right: 0;
+}
+
+/* The gold vertical divider */
+.about-mission-sep {
+  background: var(--color-gold);
+  opacity: 0.35;
+  align-self: stretch;
+  min-height: 1px;
+}
+
+/* Override section-label color on dark background */
+.about-mission .section-label {
+  color: var(--color-gold);
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.about-mission-heading {
+  font-size: clamp(1.75rem, 2.8vw, 2.3rem);
+  font-weight: 800;
+  color: var(--color-white);
+  line-height: 1.15;
+  margin-bottom: 1.25rem;
+}
+
+.about-mission-text {
+  color: rgba(255, 255, 255, 0.78);
+  line-height: 1.8;
+  font-size: 1.05rem;
+}
+
+/* Decorative accent mark under each mission heading */
+.about-mission-heading::after {
+  content: "";
+  display: block;
+  width: 36px;
+  height: 3px;
+  background: var(--color-gold);
+  border-radius: 2px;
+  margin-top: 0.75rem;
+}
+
+/* ===== ABOUT: OUR VALUES ===== */
+
+.about-values {
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  background: var(--color-cream);
+  padding: 90px 0;
+}
+
+.about-values-inner {
+  max-width: var(--container-wide);
+  margin: 0 auto;
+  padding: 0 clamp(16px, 4vw, 64px);
+}
+
+.about-values-header {
+  text-align: center;
+  margin-bottom: 3rem;
+  display: grid;
+  gap: 0.5rem;
+  justify-items: center;
+}
+
+.about-values-heading {
+  font-size: var(--heading-section);
+  font-weight: 800;
+  color: var(--color-purple);
+  margin: 0;
+}
+
+.about-values-heading::after {
+  content: "";
+  display: block;
+  width: 48px;
+  height: 3px;
+  background: var(--color-gold);
+  border-radius: 2px;
+  margin: 0.6rem auto 0;
+}
+
+.about-values-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
+.about-value-card {
+  background: var(--color-surface);
+  border-radius: 16px;
+  padding: 2rem 1.5rem;
+  text-align: center;
+  box-shadow: var(--shadow-md);
+  border-top: 3px solid var(--color-gold);
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.about-value-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg);
+}
+
+.about-value-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  background: rgba(88, 44, 131, 0.08);
+  display: grid;
+  place-items: center;
+  margin: 0 auto 1.25rem;
+}
+
+.about-value-icon svg {
+  width: 26px;
+  height: 26px;
+  fill: var(--color-purple);
+}
+
+.about-value-name {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--color-purple);
+  margin-bottom: 0.6rem;
+}
+
+.about-value-desc {
+  font-size: 0.95rem;
+  color: var(--color-text-muted);
+  line-height: 1.65;
+}
+
 /* ===== RESPONSIVE ===== */
 
 @media (max-width: 1024px) {
   .footer-grid {
     grid-template-columns: 1fr 1fr;
+  }
+
+  .about-values-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -841,10 +1030,32 @@ body:not(.home-page) .site-header {
   .history-gallery-card {
     max-width: 100%;
   }
+
+  /* Mission/Vision stacks vertically on tablet */
+  .about-mission-inner {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .about-mission-sep {
+    width: 64px;
+    height: 2px;
+    min-height: unset;
+    align-self: auto;
+    margin: 0 auto;
+  }
+
+  .about-mission-block {
+    padding: 0;
+  }
 }
 
 @media (max-width: 640px) {
   .officers-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-values-grid {
     grid-template-columns: 1fr;
   }
 }

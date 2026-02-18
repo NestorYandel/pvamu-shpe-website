@@ -35,6 +35,4 @@ hero_secondary_link: /about/
   </iframe>
 </div>
 
-{% include officers-section.html %}
-
 {% include connect-section.html %}
