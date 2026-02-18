@@ -15,7 +15,7 @@ hero_secondary_link: /about/
 
 <section class="events-intro">
   <div class="container events-intro-content">
-    <span class="events-label">UPCOMING EVENTS</span>
+    <span class="section-label">UPCOMING EVENTS</span>
     <h2 class="events-title">Event Calendar</h2>
     <p class="events-desc">
       Join us for workshops, socials, and career-focused events throughout the
