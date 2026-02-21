@@ -1439,6 +1439,43 @@ body:not(.home-page) .site-header {
   font-size: 0.9rem;
 }
 
+/* ── Footer mobile responsive ── */
+@media (max-width: 768px) {
+  .footer {
+    padding: 48px 0 24px;
+  }
+
+  .footer-col {
+    text-align: center;
+  }
+
+  .footer-logo {
+    margin: 0 auto;
+  }
+
+  .footer-links {
+    justify-items: center;
+  }
+}
+
+@media (max-width: 375px) {
+  .footer-inner {
+    padding: 0 1rem;
+  }
+
+  .footer-description {
+    font-size: 0.9rem;
+  }
+
+  .footer-heading {
+    font-size: 0.85rem;
+  }
+
+  .footer-links {
+    font-size: 0.88rem;
+  }
+}
+
 /* ===== GET INVOLVED PAGE ===== */
 
 /* Remove default bottom padding so colored closing CTA sits flush with footer */
