@@ -2,6 +2,7 @@
 layout: default
 title: About Us
 permalink: /about/
+page_class: about-page-wrap
 ---
 
 <div class="about-page">

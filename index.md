@@ -2,7 +2,7 @@
 layout: default
 title: Home
 hero: true
-hero_image: /assets/img/Hero.png   # or whatever your hero photo file is
+hero_image: /assets/img/Hero.png
 hero_title: Society of Hispanic Professional Engineers
 hero_subtitle: Prairie View A&M University
 hero_secondary_text: Learn More
@@ -10,11 +10,8 @@ hero_secondary_link: /about/
 ---
 
 
-
-
-
 <section class="events-intro">
-  <div class="container events-intro-content">
+  <div class="container events-intro-content" data-animate>
     <span class="section-label">UPCOMING EVENTS</span>
     <h2 class="events-title">Event Calendar</h2>
     <p class="events-desc">

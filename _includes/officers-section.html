@@ -7,7 +7,7 @@
 
     <div class="officers-grid">
       {% for officer in site.data.officers %}
-      <div class="officer-card">
+      <div class="officer-card" data-animate>
         <div class="officer-photo">
           {% if officer.image and officer.image != "" %}
             <img src="{{ officer.image | relative_url }}" alt="{{ officer.name }}">
