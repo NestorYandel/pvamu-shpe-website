@@ -1,35 +1,38 @@
-<section class="officers-section" aria-labelledby="officers-heading">
-  <div class="officers-inner">
+<section class="eb-section" aria-labelledby="eb-heading">
+  <div class="eb-inner">
 
-    <div class="officers-header">
-      <span class="section-label">OUR LEADERSHIP</span>
-      <h2 id="officers-heading" class="officers-heading">Meet the Executive Board</h2>
-    </div>
+    <header class="eb-header">
+      <span class="eb-label">OUR LEADERSHIP</span>
+      <h2 id="eb-heading" class="eb-heading">Meet the Executive Board</h2>
+      <p class="eb-subtitle">Meet the team leading SHPE PVAMU forward.</p>
+    </header>
 
-    <div class="officers-grid">
+    <div class="eb-grid">
       {% for officer in site.data.officers %}
-      <div class="officer-card" data-animate>
+      <article class="eb-card" data-animate>
 
-        <div class="officer-photo">
+        <div class="eb-photo">
           {% if officer.image and officer.image != "" %}
-            <img src="{{ officer.image | relative_url }}" alt="Headshot of {{ officer.name }}">
+            <img
+              src="{{ officer.image | relative_url }}"
+              alt="Headshot of {{ officer.name }}"
+            >
           {% else %}
-            <span class="officer-initials" aria-hidden="true">{{ officer.initials }}</span>
+            <div class="eb-initials" aria-hidden="true">{{ officer.initials }}</div>
           {% endif %}
         </div>
 
-        <div class="officer-info">
-          <p class="officer-name">{{ officer.name }}</p>
-          <p class="officer-title">{{ officer.title }}</p>
-          <div class="officer-divider" aria-hidden="true"></div>
-          <p class="officer-class">Class of {{ officer.graduation_year }}</p>
-          <a class="officer-email" href="mailto:{{ officer.email }}">{{ officer.email }}</a>
+        <div class="eb-info">
+          <p class="eb-name">{{ officer.name }}</p>
+          <p class="eb-title">{{ officer.title }}</p>
+          <p class="eb-class">Class of {{ officer.graduation_year }}</p>
+          <a class="eb-email" href="mailto:{{ officer.email }}">{{ officer.email }}</a>
           {% if officer.linkedin and officer.linkedin != "" %}
-            <a class="officer-linkedin" href="{{ officer.linkedin }}" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+            <a class="eb-linkedin" href="{{ officer.linkedin }}" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
           {% endif %}
         </div>
 
-      </div>
+      </article>
       {% endfor %}
     </div>
 
