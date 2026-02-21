@@ -6,8 +6,8 @@
 - name: "President Name"
   title: "President"
   initials: "PN"
-  image: ""
-  linkedin: www.linkedin.com/in/rodrigueznestor1
+  image: "/assets/img/SHPE-BryanPerez-Headshot.jpeg"
+  linkedin: https://www.linkedin.com/in/bryan-perez-3599b724a/
 
 - name: "Vice President"
   title: "Vice President"
