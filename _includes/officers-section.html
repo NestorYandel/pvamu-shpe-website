@@ -1,29 +1,37 @@
-<section class="officers-section">
-  <div class="container">
+<section class="officers-section" aria-labelledby="officers-heading">
+  <div class="officers-inner">
+
     <div class="officers-header">
       <span class="section-label">OUR LEADERSHIP</span>
-      <h2 class="officers-heading">Meet the Team</h2>
+      <h2 id="officers-heading" class="officers-heading">Meet the Executive Board</h2>
     </div>
 
     <div class="officers-grid">
       {% for officer in site.data.officers %}
       <div class="officer-card" data-animate>
+
         <div class="officer-photo">
           {% if officer.image and officer.image != "" %}
-            <img src="{{ officer.image | relative_url }}" alt="{{ officer.name }}">
+            <img src="{{ officer.image | relative_url }}" alt="Headshot of {{ officer.name }}">
           {% else %}
             <span class="officer-initials" aria-hidden="true">{{ officer.initials }}</span>
           {% endif %}
         </div>
+
         <div class="officer-info">
           <p class="officer-name">{{ officer.name }}</p>
           <p class="officer-title">{{ officer.title }}</p>
+          <div class="officer-divider" aria-hidden="true"></div>
+          <p class="officer-class">Class of {{ officer.graduation_year }}</p>
+          <a class="officer-email" href="mailto:{{ officer.email }}">{{ officer.email }}</a>
           {% if officer.linkedin and officer.linkedin != "" %}
             <a class="officer-linkedin" href="{{ officer.linkedin }}" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
           {% endif %}
         </div>
+
       </div>
       {% endfor %}
     </div>
+
   </div>
 </section>

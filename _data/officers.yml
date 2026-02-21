@@ -1,52 +1,54 @@
-# Officer data for the home page spotlight section.
+# Officer data for the Executive Board showcase section.
 # - image: leave empty ("") to show initials placeholder; fill in path when photo is ready
 #           e.g. /assets/img/officers/jane-doe.jpg
 # - linkedin: leave empty ("") to hide the link
+# - graduation_year: e.g. "2026" — displayed as "Class of 2026"
+# - email: officer's contact email — displayed as a clickable mailto link
 
-- name: "President Name"
+- name: "Bryan Perez"
   title: "President"
-  initials: "PN"
+  initials: "BP"
   image: "/assets/img/SHPE-BryanPerez-Headshot.jpeg"
-  linkedin: https://www.linkedin.com/in/bryan-perez-3599b724a/
+  linkedin: "https://www.linkedin.com/in/bryan-perez-3599b724a/"
+  graduation_year: "20XX"
+  email: "email@pvamu.edu"
 
 - name: "Vice President"
   title: "Vice President"
   initials: "VP"
   image: ""
   linkedin: ""
+  graduation_year: "20XX"
+  email: "email@pvamu.edu"
 
 - name: "Secretary"
   title: "Secretary"
   initials: "SE"
   image: ""
   linkedin: ""
+  graduation_year: "20XX"
+  email: "email@pvamu.edu"
 
 - name: "Treasurer"
   title: "Treasurer"
   initials: "TR"
   image: ""
   linkedin: ""
-
-- name: "Historian"
-  title: "Historian"
-  initials: "HI"
-  image: ""
-  linkedin: ""
-
-- name: "Webmaster"
-  title: "Webmaster"
-  initials: "WM"
-  image: ""
-  linkedin: ""
+  graduation_year: "20XX"
+  email: "email@pvamu.edu"
 
 - name: "Events Coordinator"
   title: "Events Coordinator"
   initials: "EC"
   image: ""
   linkedin: ""
+  graduation_year: "20XX"
+  email: "email@pvamu.edu"
 
 - name: "Outreach Chair"
   title: "Outreach Chair"
   initials: "OC"
   image: ""
   linkedin: ""
+  graduation_year: "20XX"
+  email: "email@pvamu.edu"
