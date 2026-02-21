@@ -49,6 +49,7 @@ html,
 body {
   height: 100%;
   background: var(--color-surface);
+  overflow-x: hidden;
 }
 
 body {
@@ -1372,10 +1373,13 @@ body:not(.home-page) .site-header {
   background: var(--color-navy);
   color: var(--color-white);
   padding: 64px 0 24px;
+  width: 100%;
+  overflow-x: hidden;
 }
 
 .footer-inner {
   max-width: var(--container-wide);
+  width: 100%;
   margin: 0 auto;
   padding: 0 1.5rem;
 }
@@ -1384,6 +1388,7 @@ body:not(.home-page) .site-header {
   display: grid;
   grid-template-columns: 2fr 1fr 1fr 1fr;
   gap: 48px;
+  width: 100%;
 }
 
 .footer-brand {
@@ -1443,13 +1448,29 @@ body:not(.home-page) .site-header {
 @media (max-width: 768px) {
   .footer {
     padding: 48px 0 24px;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .footer-inner {
+    width: 100%;
+    max-width: 100%;
+    padding: 0 1.25rem;
+  }
+
+  .footer-grid {
+    width: 100%;
+    max-width: 100%;
   }
 
   .footer-col {
+    width: 100%;
+    max-width: 100%;
     text-align: center;
   }
 
   .footer-logo {
+    max-width: 100%;
     margin: 0 auto;
   }
 
