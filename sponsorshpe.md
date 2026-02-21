@@ -125,7 +125,7 @@ page_class: sponsorshpe-page
         <!-- Bronce -->
         <div class="sp-tier-card" data-animate>
           <div class="sp-tier-header sp-tier-header--bronce">
-            <span class="sp-tier-metal">Bronce</span>
+            <span class="sp-tier-metal">Bronze</span>
             <span class="sp-tier-price">$250</span>
           </div>
           <ul class="sp-tier-benefits">
@@ -139,7 +139,7 @@ page_class: sponsorshpe-page
         <!-- Plata -->
         <div class="sp-tier-card" data-animate style="--delay:0.1s">
           <div class="sp-tier-header sp-tier-header--plata">
-            <span class="sp-tier-metal">Plata</span>
+            <span class="sp-tier-metal">Silver</span>
             <span class="sp-tier-price">$500</span>
           </div>
           <ul class="sp-tier-benefits">
@@ -157,7 +157,7 @@ page_class: sponsorshpe-page
         <div class="sp-tier-card sp-tier-card--featured" data-animate style="--delay:0.2s">
           <div class="sp-tier-badge">Most Popular</div>
           <div class="sp-tier-header sp-tier-header--oro">
-            <span class="sp-tier-metal">Oro</span>
+            <span class="sp-tier-metal">Gold</span>
             <span class="sp-tier-price">$1,000</span>
           </div>
           <ul class="sp-tier-benefits">
@@ -177,7 +177,7 @@ page_class: sponsorshpe-page
         <!-- Diamante -->
         <div class="sp-tier-card" data-animate style="--delay:0.3s">
           <div class="sp-tier-header sp-tier-header--diamante">
-            <span class="sp-tier-metal">Diamante</span>
+            <span class="sp-tier-metal">Diamond</span>
             <span class="sp-tier-price">$2,000</span>
           </div>
           <ul class="sp-tier-benefits">
