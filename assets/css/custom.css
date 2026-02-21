@@ -1256,3 +1256,618 @@ body:not(.home-page) .site-header {
   color: var(--color-footer-text);
   font-size: 0.9rem;
 }
+
+/* ===== GET INVOLVED PAGE ===== */
+
+/* Remove default bottom padding so colored closing CTA sits flush with footer */
+.get-involved-page .page-content {
+  padding-bottom: 0;
+}
+
+/* ── Shared section utilities ── */
+
+.gi-section-inner {
+  max-width: var(--container-wide);
+  margin: 0 auto;
+  padding: 0 clamp(16px, 4vw, 48px);
+}
+
+.gi-section-header {
+  text-align: center;
+  margin-bottom: 3rem;
+  display: grid;
+  gap: 0.5rem;
+  justify-items: center;
+}
+
+.gi-section-heading {
+  font-size: var(--heading-section);
+  font-weight: 800;
+  color: var(--color-purple);
+  margin: 0;
+}
+
+.gi-section-heading::after {
+  content: "";
+  display: block;
+  width: 48px;
+  height: 3px;
+  background: var(--color-gold);
+  border-radius: 2px;
+  margin: 0.6rem auto 0;
+}
+
+/* Light variant — headings on dark backgrounds */
+.gi-heading-light {
+  color: var(--color-white);
+}
+
+.gi-heading-light::after {
+  background: var(--color-gold);
+}
+
+.gi-section-sub {
+  color: var(--color-text-muted);
+  font-size: 1.05rem;
+  line-height: 1.65;
+  max-width: 65ch;
+  margin: 0 auto;
+}
+
+.gi-sub-light {
+  color: rgba(255, 255, 255, 0.78);
+}
+
+/* In-page link style */
+.gi-link {
+  color: var(--color-purple);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.gi-link:hover {
+  color: var(--color-purple-dark);
+}
+
+/* ── Hero Banner ── */
+
+.gi-hero {
+  /* Pull up into the page-content padding so purple starts right at the header */
+  margin-top: -110px;
+  padding-top: calc(110px + 4.5rem);
+  padding-bottom: 5rem;
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  background: linear-gradient(135deg, var(--color-purple) 0%, #3d1f5e 100%);
+  text-align: center;
+  color: var(--color-white);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Subtle radial gold accent for depth */
+.gi-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 70% 30%, rgba(234, 170, 0, 0.12) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+.gi-hero-inner {
+  position: relative;
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  display: grid;
+  gap: 1.25rem;
+  justify-items: center;
+}
+
+.gi-hero-label {
+  color: var(--color-gold);
+}
+
+.gi-hero-title {
+  font-size: clamp(2.4rem, 4.8vw, 3.8rem);
+  font-weight: 900;
+  line-height: 1.1;
+  margin: 0;
+}
+
+.gi-hero-subtitle {
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  line-height: 1.65;
+  color: rgba(255, 255, 255, 0.85);
+  max-width: 55ch;
+  margin: 0;
+}
+
+.gi-hero-btn {
+  margin-top: 0.5rem;
+  padding: 0.9rem 2.25rem;
+  font-size: 1rem;
+}
+
+/* ── Benefits / Why Join ── */
+
+.gi-benefits {
+  background: var(--color-cream);
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  padding: 90px 0;
+}
+
+.gi-benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.gi-benefit-card {
+  background: var(--color-surface);
+  border-radius: 16px;
+  padding: 2rem 1.5rem;
+  text-align: center;
+  box-shadow: var(--shadow-md);
+  border-top: 3px solid var(--color-gold);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.gi-benefit-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg);
+}
+
+.gi-benefit-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  background: rgba(88, 44, 131, 0.08);
+  display: grid;
+  place-items: center;
+  margin: 0 auto 1.25rem;
+}
+
+.gi-benefit-icon svg {
+  width: 26px;
+  height: 26px;
+  fill: var(--color-purple);
+}
+
+.gi-benefit-name {
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: var(--color-purple);
+  margin-bottom: 0.5rem;
+}
+
+.gi-benefit-desc {
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+  line-height: 1.65;
+  margin: 0;
+}
+
+/* ── Membership Steps ── */
+
+.gi-steps {
+  background: var(--color-surface);
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  padding: 90px 0;
+}
+
+.gi-steps-list {
+  list-style: none;
+  display: grid;
+  gap: 1.25rem;
+  padding: 0;
+  margin: 0;
+}
+
+.gi-step {
+  display: grid;
+  grid-template-columns: 56px 1fr;
+  gap: 1.5rem;
+  align-items: start;
+  background: var(--color-surface);
+  border: 1px solid rgba(88, 44, 131, 0.1);
+  border-radius: 16px;
+  padding: 1.75rem 2rem;
+  box-shadow: var(--shadow-md);
+  transition: box-shadow 0.2s ease;
+}
+
+.gi-step:hover {
+  box-shadow: var(--shadow-lg);
+}
+
+.gi-step-number {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--color-purple);
+  color: var(--color-white);
+  display: grid;
+  place-items: center;
+  font-size: 1.2rem;
+  font-weight: 800;
+  flex-shrink: 0;
+  line-height: 1;
+}
+
+.gi-step-content {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.gi-step-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--color-text);
+  margin: 0;
+}
+
+.gi-step-desc {
+  color: var(--color-text-muted);
+  line-height: 1.7;
+  margin: 0;
+  font-size: 0.97rem;
+}
+
+.gi-step-btn {
+  margin-top: 0.75rem;
+  opacity: 0.6;
+  cursor: not-allowed;
+  font-size: 0.9rem;
+}
+
+.gi-step-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* ── Member Points Teaser ── */
+
+.gi-points {
+  background: var(--color-navy);
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  padding: 90px 0;
+}
+
+.gi-points-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1.25rem;
+  margin-bottom: 3rem;
+}
+
+.gi-points-item {
+  text-align: center;
+  display: grid;
+  gap: 0.75rem;
+  justify-items: center;
+}
+
+.gi-points-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 16px;
+  background: rgba(234, 170, 0, 0.12);
+  display: grid;
+  place-items: center;
+}
+
+.gi-points-icon svg {
+  width: 28px;
+  height: 28px;
+  fill: var(--color-gold);
+}
+
+.gi-points-label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.8);
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* Convention spotlight callout */
+.gi-points-spotlight {
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(234, 170, 0, 0.3);
+  border-left: 4px solid var(--color-gold);
+  border-radius: 16px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+
+.gi-points-spotlight-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  background: rgba(234, 170, 0, 0.15);
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+}
+
+.gi-points-spotlight-icon svg {
+  width: 28px;
+  height: 28px;
+  fill: var(--color-gold);
+}
+
+.gi-points-spotlight-title {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--color-white);
+  margin: 0 0 0.5rem;
+}
+
+.gi-points-spotlight-desc {
+  color: rgba(255, 255, 255, 0.78);
+  line-height: 1.75;
+  margin: 0;
+  font-size: 0.97rem;
+}
+
+.gi-points-coming-soon {
+  text-align: center;
+  color: rgba(255, 255, 255, 0.45);
+  font-size: 0.9rem;
+  font-style: italic;
+  margin: 0;
+}
+
+/* ── Other Ways to Get Involved ── */
+
+.gi-ways {
+  background: var(--color-cream);
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  padding: 90px 0;
+}
+
+.gi-ways-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.25rem;
+}
+
+/* Center lone 5th card in its row */
+.gi-ways-card--last:nth-child(odd) {
+  grid-column: 1 / -1;
+  max-width: calc(50% - 0.625rem);
+  justify-self: center;
+}
+
+.gi-ways-card {
+  display: flex;
+  gap: 1.25rem;
+  align-items: flex-start;
+  background: var(--color-surface);
+  border-radius: 16px;
+  padding: 1.75rem;
+  box-shadow: var(--shadow-md);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.gi-ways-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.gi-ways-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: rgba(88, 44, 131, 0.08);
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+}
+
+.gi-ways-icon svg {
+  width: 24px;
+  height: 24px;
+  fill: var(--color-purple);
+}
+
+.gi-ways-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-text);
+  margin: 0 0 0.4rem;
+}
+
+.gi-ways-desc {
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+  line-height: 1.65;
+  margin: 0;
+}
+
+/* ── FAQ Accordion ── */
+
+.gi-faq {
+  background: var(--color-surface);
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  padding: 90px 0;
+}
+
+.gi-faq-list {
+  max-width: 800px;
+  margin: 0 auto;
+  width: 100%;
+  border-top: 1px solid rgba(88, 44, 131, 0.12);
+}
+
+details.gi-faq-item {
+  border-bottom: 1px solid rgba(88, 44, 131, 0.12);
+}
+
+details.gi-faq-item summary {
+  cursor: pointer;
+  padding: 1.25rem 0;
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: var(--color-text);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  list-style: none;
+  user-select: none;
+}
+
+/* Remove default triangle in WebKit */
+details.gi-faq-item summary::-webkit-details-marker {
+  display: none;
+}
+
+/* + indicator */
+details.gi-faq-item summary::after {
+  content: '+';
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: var(--color-purple);
+  flex-shrink: 0;
+  line-height: 1;
+  transition: transform 0.2s ease;
+}
+
+/* Rotate + to × when open */
+details.gi-faq-item[open] summary::after {
+  transform: rotate(45deg);
+}
+
+.gi-faq-answer {
+  padding-bottom: 1.5rem;
+  color: var(--color-text-muted);
+  line-height: 1.75;
+}
+
+.gi-faq-answer p {
+  margin: 0;
+}
+
+/* ── Closing CTA Banner ── */
+
+.gi-closing-cta {
+  background: linear-gradient(135deg, var(--color-purple) 0%, #3d1f5e 100%);
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  padding: 80px 0;
+  text-align: center;
+  color: var(--color-white);
+  position: relative;
+  overflow: hidden;
+}
+
+.gi-closing-cta::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 30% 70%, rgba(234, 170, 0, 0.1) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+.gi-closing-cta-inner {
+  position: relative;
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  display: grid;
+  gap: 1rem;
+  justify-items: center;
+}
+
+.gi-closing-cta-title {
+  font-size: clamp(2rem, 3.5vw, 2.8rem);
+  font-weight: 900;
+  margin: 0;
+}
+
+.gi-closing-cta-sub {
+  font-size: 1.05rem;
+  line-height: 1.65;
+  color: rgba(255, 255, 255, 0.82);
+  max-width: 52ch;
+  margin: 0;
+}
+
+/* ── Get Involved Responsive ── */
+
+@media (max-width: 1024px) {
+  .gi-benefits-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .gi-points-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .gi-hero {
+    padding-top: calc(80px + 3rem);
+    padding-bottom: 4rem;
+  }
+
+  .gi-benefits-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .gi-step {
+    grid-template-columns: 44px 1fr;
+    gap: 1rem;
+    padding: 1.5rem;
+  }
+
+  .gi-step-number {
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+  }
+
+  .gi-points-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .gi-points-spotlight {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .gi-ways-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .gi-ways-card--last:nth-child(odd) {
+    grid-column: auto;
+    max-width: none;
+    justify-self: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .gi-benefits-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .gi-points-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .gi-hero-title {
+    font-size: 2.1rem;
+  }
+}
