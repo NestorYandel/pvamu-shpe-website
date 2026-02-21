@@ -19,7 +19,41 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
-  // ── Scroll-reveal animations ────────────────────────────────────────────
+  // ── Mobile nav toggle ────────────────────────────────────────────────────
+  var navToggle = document.getElementById("nav-toggle");
+  var siteNav = document.getElementById("site-nav");
+
+  function closeNav() {
+    if (!siteNav) return;
+    siteNav.classList.remove("is-open");
+    navToggle.setAttribute("aria-expanded", "false");
+    navToggle.setAttribute("aria-label", "Open navigation menu");
+    document.body.style.overflow = "";
+  }
+
+  if (navToggle && siteNav) {
+    navToggle.addEventListener("click", function () {
+      var isOpen = siteNav.classList.toggle("is-open");
+      navToggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+      navToggle.setAttribute("aria-label", isOpen ? "Close navigation menu" : "Open navigation menu");
+      document.body.style.overflow = isOpen ? "hidden" : "";
+    });
+
+    // Close when a nav link is clicked
+    siteNav.querySelectorAll("a").forEach(function (link) {
+      link.addEventListener("click", closeNav);
+    });
+
+    // Close on Escape key
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape" && siteNav.classList.contains("is-open")) {
+        closeNav();
+        navToggle.focus();
+      }
+    });
+  }
+
+  // ── Scroll-reveal animations ─────────────────────────────────────────────
   var animatables = document.querySelectorAll("[data-animate]");
   if (animatables.length && "IntersectionObserver" in window) {
     var observer = new IntersectionObserver(

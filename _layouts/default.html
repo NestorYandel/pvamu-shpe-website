@@ -15,51 +15,71 @@
   </head>
   <body class="{% if page.hero %}home-page{% endif %}">
     <div class="site-shell">
+
       <!-- HEADER / NAV -->
       <header id="site-header" class="site-header">
-      <div class="nav-bar">
-  <div class="nav-inner">
-        <div class="logo">
-          <a href="{{ '/' | relative_url }}" class="logo-link" aria-label="SHPE PVAMU logo">
-            <span class="logo-swap">
-              <img
-                src="{{ '/assets/img/PVSHPE_HorizontalWhite.png' | relative_url }}" 
-                alt=""
-                aria-hidden="true"
-                class="logo-mark logo-default"
-              >
-              <img
-                src="{{ '/assets/img/SHPEPVAMU_Horizontal.png' | relative_url }}"
-                alt=""
-                aria-hidden="true"
-                class="logo-mark logo-scrolled"
-              >
-            </span>
-          </a>
-        </div>
-        <nav>
-          <ul class="nav-links">
-            <li><a href="{{ '/' | relative_url }}">Home</a></li>
-            <li><a href="{{ '/about/' | relative_url }}">About</a></li>
-            <li><a href="{{ '/get-involved/' | relative_url }}">Get Involved</a></li>
-            <li><a href="{{ '/sponsorshpe/' | relative_url }}">SponsorSHPE</a></li>
-          </ul>
-        </nav>
-      </div>
+        <div class="nav-bar">
+          <div class="nav-inner">
+
+            <div class="logo">
+              <a href="{{ '/' | relative_url }}" class="logo-link" aria-label="SHPE PVAMU logo">
+                <span class="logo-swap">
+                  <img
+                    src="{{ '/assets/img/PVSHPE_HorizontalWhite.png' | relative_url }}"
+                    alt=""
+                    aria-hidden="true"
+                    class="logo-mark logo-default"
+                  >
+                  <img
+                    src="{{ '/assets/img/SHPEPVAMU_Horizontal.png' | relative_url }}"
+                    alt=""
+                    aria-hidden="true"
+                    class="logo-mark logo-scrolled"
+                  >
+                </span>
+              </a>
+            </div>
+
+            <button
+              class="nav-toggle"
+              id="nav-toggle"
+              aria-label="Open navigation menu"
+              aria-expanded="false"
+              aria-controls="site-nav"
+            >
+              <span class="nav-toggle-bar"></span>
+              <span class="nav-toggle-bar"></span>
+              <span class="nav-toggle-bar"></span>
+            </button>
+
+            <nav id="site-nav">
+              <ul class="nav-links">
+                <li><a href="{{ '/' | relative_url }}">Home</a></li>
+                <li><a href="{{ '/about/' | relative_url }}">About</a></li>
+                <li><a href="{{ '/get-involved/' | relative_url }}">Get Involved</a></li>
+                <li><a href="{{ '/sponsorshpe/' | relative_url }}">SponsorSHPE</a></li>
+              </ul>
+            </nav>
+
+          </div><!-- /.nav-inner -->
+        </div><!-- /.nav-bar -->
       </header>
 
-    <!-- HERO (only for pages that turn it on) -->
+      <!-- HERO (only for pages that set hero: true in front matter) -->
       {% if page.hero %}
       <section
         class="hero"
-        style="background-image: url('{{ page.hero_image | default: \"/assets/img/hero.jpg\" | relative_url }}');"
+        style="background-image: url('{{ page.hero_image | default: "/assets/img/Hero.png" | relative_url }}');"
       >
         <div class="container hero-content">
           <div class="hero-text">
             <h1>{{ page.hero_title }}</h1>
             <h2 class="hero-subtitle">{{ page.hero_subtitle }}</h2>
             <div class="hero-buttons">
-              <a href="{{ page.hero_secondary_link | default: '/about/' | relative_url }}" class="btn btn-outline">
+              <a href="{{ '/get-involved/' | relative_url }}" class="btn btn-hero-primary">
+                Join Us
+              </a>
+              <a href="{{ page.hero_secondary_link | default: '/about/' | relative_url }}" class="btn btn-hero-outline">
                 {{ page.hero_secondary_text | default: 'Learn More' }}
               </a>
             </div>
@@ -75,8 +95,9 @@
         </div>
       </main>
 
-     {% include footer.html %}
-    </div>
+      {% include footer.html %}
+
+    </div><!-- /.site-shell -->
 
     <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
   </body>
