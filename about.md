@@ -22,6 +22,9 @@ page_class: about-page-wrap
     </div>
   </section>
 
+  <!-- ===== HISTORY & GALLERY ===== -->
+  {% include about-history.html %}
+
   <!-- ===== MISSION & VISION ===== -->
   <!-- Replace the placeholder text below with your chapter's official statements -->
   <section id="mission" class="about-mission" aria-labelledby="mission-heading">
@@ -112,9 +115,6 @@ page_class: about-page-wrap
       </div>
     </div>
   </section>
-
-  <!-- ===== HISTORY & GALLERY ===== -->
-  {% include about-history.html %}
 
 </div>
 
