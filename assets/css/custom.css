@@ -665,6 +665,14 @@ body:not(.home-page) .site-header {
   text-decoration: underline;
 }
 
+.eb-bio {
+  font-size: 0.82rem;
+  color: var(--color-text-subtle);
+  margin-top: 0.75rem;
+  line-height: 1.55;
+  font-style: italic;
+}
+
 /* ── Responsive ── */
 
 @media (max-width: 960px) {
@@ -2691,5 +2699,141 @@ details.gi-faq-item[open] summary::after {
 @media (max-width: 480px) {
   .sp-hero-title {
     font-size: 2rem;
+  }
+}
+
+/* ===== OFFICERS PAGE ===== */
+
+/* Flush last section to footer */
+.officers-page .page-content {
+  padding-bottom: 0;
+}
+
+/* ── Hero ── */
+
+.of-page .of-hero {
+  text-align: center;
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-top: -110px;
+  padding: calc(110px + 4rem) 1.5rem 5rem;
+  background: linear-gradient(135deg, var(--color-purple-dark) 0%, var(--color-purple) 60%, #6b35a0 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.of-page .of-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 70% 40%, rgba(234, 170, 0, 0.1) 0%, transparent 55%);
+  pointer-events: none;
+}
+
+.of-page .of-hero-inner {
+  position: relative;
+  max-width: var(--container-wide);
+  margin: 0 auto;
+  display: grid;
+  justify-items: center;
+}
+
+.of-page .of-hero-kicker {
+  color: var(--color-gold);
+  font-size: 0.95rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: 18px;
+}
+
+.of-page .of-hero-title {
+  color: var(--color-white);
+  font-weight: 900;
+  font-size: clamp(3.6rem, 6.2vw, 4.75rem);
+  line-height: 1.08;
+  margin-bottom: 20px;
+}
+
+.of-page .of-hero-subtitle {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: clamp(1.1rem, 2.1vw, 1.35rem);
+  line-height: 1.6;
+  margin: 0 auto 2.5rem;
+}
+
+.of-page .of-hero-divider {
+  height: 2px;
+  width: 100%;
+  max-width: var(--container-wide);
+  background: var(--color-gold);
+}
+
+/* ── Past Executive Boards ── */
+
+.of-past {
+  background: var(--color-surface);
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  padding: 90px 0;
+}
+
+.of-past-inner {
+  max-width: var(--container-wide);
+  margin: 0 auto;
+  padding: 0 clamp(16px, 4vw, 64px);
+}
+
+.of-past-header {
+  text-align: center;
+  margin-bottom: 3rem;
+  display: grid;
+  gap: 0.5rem;
+  justify-items: center;
+}
+
+.of-past-heading {
+  font-size: var(--heading-section);
+  font-weight: 800;
+  color: var(--color-purple);
+  margin: 0;
+}
+
+.of-past-heading::after {
+  content: "";
+  display: block;
+  width: 48px;
+  height: 3px;
+  background: var(--color-gold);
+  border-radius: 2px;
+  margin: 0.6rem auto 0;
+}
+
+.of-past-sub {
+  color: var(--color-text-muted);
+  font-size: 1.05rem;
+  line-height: 1.6;
+  max-width: 52ch;
+  margin: 0;
+}
+
+.of-past-list {
+  max-width: 800px;
+  margin: 0 auto;
+  width: 100%;
+  border-top: 1px solid rgba(88, 44, 131, 0.12);
+}
+
+/* ── Officers Responsive ── */
+
+@media (max-width: 768px) {
+  .of-page .of-hero {
+    padding: calc(110px + 3rem) 1.5rem 3.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .of-page .of-hero-title {
+    font-size: 2.6rem;
   }
 }

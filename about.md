@@ -116,9 +116,6 @@ page_class: about-page-wrap
   <!-- ===== HISTORY & GALLERY ===== -->
   {% include about-history.html %}
 
-  <!-- ===== MEET THE TEAM ===== -->
-  {% include officers-section.html %}
-
 </div>
 
 <script src="{{ '/assets/js/gallery.js' | relative_url }}" defer></script>
