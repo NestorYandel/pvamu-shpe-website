@@ -17,8 +17,115 @@ page_class: officers-page
     </div>
   </section>
 
-  <!-- ===== CURRENT OFFICERS ===== -->
-  {% include officers-section.html %}
+  <!-- ===== BOARD SHOWCASE ===== -->
+  <section class="ofb-board" aria-labelledby="ofb-board-heading">
+    <div class="ofb-board-inner">
+
+      <!-- ── Roster sidebar ── -->
+      <aside class="ofb-roster" aria-label="Executive board roster">
+
+        <header class="ofb-roster-header">
+          <span class="ofb-roster-label">The Board</span>
+          <span class="ofb-roster-count">{{ site.data.officers | size }} Members</span>
+        </header>
+
+        <ul class="ofb-roster-list" role="list">
+          {% for officer in site.data.officers %}
+          <li>
+            <button
+              class="ofb-roster-btn{% if forloop.first %} is-active{% endif %}"
+              data-officer="{{ forloop.index }}"
+              aria-pressed="{% if forloop.first %}true{% else %}false{% endif %}"
+              type="button"
+            >
+              <span class="ofb-roster-num" aria-hidden="true">{% if forloop.index < 10 %}0{% endif %}{{ forloop.index }}</span>
+              <span class="ofb-roster-info">
+                <span class="ofb-roster-name">{{ officer.name }}</span>
+                <span class="ofb-roster-role">{{ officer.title }}</span>
+              </span>
+              <svg class="ofb-roster-chevron" viewBox="0 0 16 16" aria-hidden="true" focusable="false">
+                <polyline points="6,3 11,8 6,13" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+          </li>
+          {% endfor %}
+        </ul>
+
+      </aside>
+
+      <!-- ── Spotlight panels ── -->
+      <div class="ofb-spotlight" aria-live="polite" aria-label="Selected officer profile" id="ofb-spotlight">
+
+        {% for officer in site.data.officers %}
+        <div
+          class="ofb-panel{% if forloop.first %} is-active{% endif %}"
+          data-panel="{{ forloop.index }}"
+          aria-hidden="{% if forloop.first %}false{% else %}true{% endif %}"
+          role="region"
+          aria-labelledby="ofb-name-{{ forloop.index }}"
+        >
+
+          <!-- Photo -->
+          <div class="ofb-panel-photo">
+            {% if officer.image and officer.image != "" %}
+              <img
+                src="{{ officer.image | relative_url }}"
+                alt="Portrait of {{ officer.name }}"
+                loading="lazy"
+              >
+            {% else %}
+              <div class="ofb-panel-initials" aria-hidden="true">{{ officer.initials }}</div>
+            {% endif %}
+            <div class="ofb-panel-photo-edge" aria-hidden="true"></div>
+          </div>
+
+          <!-- Info -->
+          <div class="ofb-panel-info">
+
+            <div class="ofb-panel-ident">
+              <h2 id="ofb-name-{{ forloop.index }}" class="ofb-panel-name">{{ officer.name }}</h2>
+              <span class="ofb-panel-badge">{{ officer.title }}</span>
+            </div>
+
+            <div class="ofb-panel-meta">
+              <div class="ofb-panel-meta-row">
+                <!-- graduation cap icon -->
+                <svg class="ofb-panel-meta-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82zM12 3L1 9l11 6 9-4.91V17h2V9L12 3z"/></svg>
+                <span class="ofb-panel-meta-text">Class of {{ officer.graduation_year }}</span>
+              </div>
+              <div class="ofb-panel-meta-row">
+                <!-- envelope icon -->
+                <svg class="ofb-panel-meta-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                <a class="ofb-panel-meta-text" href="mailto:{{ officer.email }}">{{ officer.email }}</a>
+              </div>
+              {% if officer.linkedin and officer.linkedin != "" %}
+              <div class="ofb-panel-meta-row">
+                <!-- linkedin icon -->
+                <svg class="ofb-panel-meta-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
+                <a class="ofb-panel-meta-text" href="{{ officer.linkedin }}" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+              </div>
+              {% endif %}
+            </div>
+
+            <div class="ofb-panel-divider" aria-hidden="true"></div>
+
+            <div class="ofb-panel-bio-block">
+              <span class="ofb-panel-bio-label">About</span>
+              {% if officer.name == "Bryan Perez" %}
+                <p class="ofb-panel-bio">Bryan Perez is a senior Computer Science student at Prairie View A&amp;M University with a passion for leadership and community building. As President of SHPE PVAMU, he is committed to creating opportunities for Hispanic students in STEM and growing the chapter into a powerful resource for members. Outside of SHPE, Bryan enjoys networking, mentorship, and giving back to his community.</p>
+              {% else %}
+                <p class="ofb-panel-bio">Bio coming soon. Check back for updates.</p>
+              {% endif %}
+            </div>
+
+          </div><!-- /.ofb-panel-info -->
+        </div><!-- /.ofb-panel -->
+        {% endfor %}
+
+      </div><!-- /.ofb-spotlight -->
+
+    </div><!-- /.ofb-board-inner -->
+  </section>
 
   <!-- ===== PAST EXECUTIVE BOARDS ===== -->
   <section class="of-past" aria-labelledby="of-past-title">
@@ -50,4 +157,41 @@ page_class: officers-page
     </div>
   </section>
 
-</div>
+</div><!-- /.of-page -->
+
+<script>
+(function () {
+  'use strict';
+
+  var btns    = document.querySelectorAll('.ofb-roster-btn');
+  var panels  = document.querySelectorAll('.ofb-panel');
+  var spotlight = document.getElementById('ofb-spotlight');
+
+  if (!btns.length || !panels.length) return;
+
+  function activate(id) {
+    btns.forEach(function (b) {
+      var on = b.dataset.officer === id;
+      b.classList.toggle('is-active', on);
+      b.setAttribute('aria-pressed', on ? 'true' : 'false');
+    });
+    panels.forEach(function (p) {
+      var on = p.dataset.panel === id;
+      p.classList.toggle('is-active', on);
+      p.setAttribute('aria-hidden', on ? 'false' : 'true');
+    });
+  }
+
+  btns.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      activate(this.dataset.officer);
+      /* On small screens, scroll the spotlight into view after the switch */
+      if (spotlight && window.innerWidth <= 768) {
+        setTimeout(function () {
+          spotlight.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }, 40);
+      }
+    });
+  });
+}());
+</script>
