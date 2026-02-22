@@ -105,7 +105,7 @@ page_class: get-involved-page
           <div class="gi-step-number" aria-hidden="true">2</div>
           <div class="gi-step-content">
             <h3 class="gi-step-title">Create a Free SHPEConnect Account</h3>
-            <p class="gi-step-desc">Visit <a class="gi-link" href="https://shpe.org" target="_blank" rel="noopener">shpe.org</a> and create your free account on SHPEConnect, SHPE's official member portal. This account is your gateway to scholarships, the Career Center, and all national resources.</p>
+            <p class="gi-step-desc">Head to <a class="gi-link" href="https://www.shpeconnect.org/eweb/DynamicPage.aspx?WebCode=LoginRequired&expires=yes&Site=shpe" target="_blank" rel="noopener">SHPEConnect</a> and create your free account. This is SHPE's official member portal and your gateway to scholarships, the Career Center, and all national resources.</p>
           </div>
         </li>
 
@@ -113,7 +113,7 @@ page_class: get-involved-page
           <div class="gi-step-number" aria-hidden="true">3</div>
           <div class="gi-step-content">
             <h3 class="gi-step-title">Purchase Your National Membership</h3>
-            <p class="gi-step-desc">Through SHPEConnect, purchase the <strong>Undergraduate national membership for $15 per year</strong>. When prompted, select <strong>Prairie View A&amp;M University</strong> as your chapter. This is what officially makes you a SHPE national member.</p>
+            <p class="gi-step-desc">Once logged in, click <strong>"Join/Renew Membership"</strong> and follow these steps: select <strong>Region 5</strong> as your region, then select <strong>Prairie View A&amp;M University</strong> as your chapter. Fill out all required account and educational information, agree to the Code of Ethics, then add the membership to your cart and complete payment. Make sure to <strong>take a screenshot of your payment confirmation</strong> — you'll need it for chapter registration.</p>
           </div>
         </li>
 
