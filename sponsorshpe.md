@@ -289,4 +289,14 @@ page_class: sponsorshpe-page
     </div>
   </section>
 
+  <!-- ── 7. THANK YOU ───────────────────────────────── -->
+  <section class="sp-thanks" aria-labelledby="sp-thanks-title">
+    <div class="sp-thanks-inner">
+      <h2 id="sp-thanks-title" class="sp-thanks-heading">Thank You</h2>
+      <p class="sp-thanks-body">
+        Sponsors are more than financial contributors — you are genuine partners in the work we do and in the futures we are building together. Your decision to support SHPE PVAMU reflects a real belief in these students and in the importance of a more diverse, more inclusive STEM community, and we carry that belief with us in everything we do. We are aware that there are many places your support could go, and we do not take the trust you place in us for granted. To every organization and individual who has chosen to stand behind SHPE PVAMU: this chapter and its members are better because of you.
+      </p>
+    </div>
+  </section>
+
 </div>

@@ -1455,6 +1455,43 @@ body:not(.home-page) .site-header {
   font-size: 0.9rem;
 }
 
+/* ===== SPONSORSHPE: THANK YOU ===== */
+
+.sp-thanks {
+  padding: 80px 0 90px;
+  text-align: center;
+  background: var(--color-surface);
+}
+
+.sp-thanks-inner {
+  max-width: 660px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.sp-thanks-heading {
+  font-size: clamp(2rem, 3.4vw, 2.75rem);
+  font-weight: 800;
+  color: var(--color-purple);
+  margin-bottom: 1.5rem;
+}
+
+.sp-thanks-heading::after {
+  content: "";
+  display: block;
+  width: 48px;
+  height: 3px;
+  background: var(--color-gold);
+  border-radius: 2px;
+  margin: 0.6rem auto 0;
+}
+
+.sp-thanks-body {
+  color: var(--color-text-muted);
+  font-size: 1.1rem;
+  line-height: 1.85;
+}
+
 /* ── Footer mobile responsive ── */
 @media (max-width: 768px) {
   .footer {
