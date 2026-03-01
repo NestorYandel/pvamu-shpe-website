@@ -116,6 +116,84 @@ page_class: about-page-wrap
     </div>
   </section>
 
+  <!-- ===== CHAPTER LIFE ===== -->
+  <section class="about-life" aria-labelledby="about-life-title">
+    <div class="about-life-inner">
+
+      <div class="about-life-header">
+        <span class="section-label">CHAPTER LIFE</span>
+        <h2 id="about-life-title" class="about-life-heading">In the Community</h2>
+      </div>
+
+      <div class="about-life-grid">
+
+        <figure class="about-life-card" data-animate>
+          <img
+            src="{{ '/assets/img/social/2023-PVSHPE-InternationalMixer.png' | relative_url }}"
+            alt="SHPE PVAMU members at the International Mixer, 2023"
+            loading="lazy" width="600" height="400"
+          >
+          <figcaption class="about-life-caption">International Mixer — 2023</figcaption>
+        </figure>
+
+        <figure class="about-life-card" data-animate style="--delay: 0.07s">
+          <img
+            src="{{ '/assets/img/social/2023-PVSHPE-SoccerSocial.png' | relative_url }}"
+            alt="SHPE PVAMU Soccer Social, 2023"
+            loading="lazy" width="600" height="400"
+          >
+          <figcaption class="about-life-caption">Soccer Social — 2023</figcaption>
+        </figure>
+
+        <figure class="about-life-card" data-animate style="--delay: 0.14s">
+          <img
+            src="{{ '/assets/img/social/2025-LaUltimaPachanga-GroupPic.jpg' | relative_url }}"
+            alt="SHPE PVAMU members at La Última Pachanga, 2025"
+            loading="lazy" width="600" height="400"
+          >
+          <figcaption class="about-life-caption">La Última Pachanga — 2025</figcaption>
+        </figure>
+
+        <figure class="about-life-card" data-animate style="--delay: 0s">
+          <img
+            src="{{ '/assets/img/social/2025-LaUltimaPachanga-ChessPic.png' | relative_url }}"
+            alt="SHPE PVAMU members playing chess at La Última Pachanga, 2025"
+            loading="lazy" width="600" height="400"
+          >
+          <figcaption class="about-life-caption">La Última Pachanga — 2025</figcaption>
+        </figure>
+
+        <figure class="about-life-card" data-animate style="--delay: 0.07s">
+          <img
+            src="{{ '/assets/img/social/2025Fall-LoteriaNightPic.png' | relative_url }}"
+            alt="SHPE PVAMU Lotería Night, Fall 2025"
+            loading="lazy" width="600" height="400"
+          >
+          <figcaption class="about-life-caption">Lotería Night — Fall 2025</figcaption>
+        </figure>
+
+        <figure class="about-life-card" data-animate style="--delay: 0.14s">
+          <img
+            src="{{ '/assets/img/social/2025Fall-NocheLatino.png' | relative_url }}"
+            alt="SHPE PVAMU Noche Latino, Fall 2025"
+            loading="lazy" width="600" height="400"
+          >
+          <figcaption class="about-life-caption">Noche Latino — Fall 2025</figcaption>
+        </figure>
+
+        <figure class="about-life-card about-life-card--last" data-animate style="--delay: 0.07s">
+          <img
+            src="{{ '/assets/img/social/2025Fall-SHPEWallerCountyFair.png' | relative_url }}"
+            alt="SHPE PVAMU at the Waller County Fair, Fall 2025"
+            loading="lazy" width="600" height="400"
+          >
+          <figcaption class="about-life-caption">Waller County Fair — Fall 2025</figcaption>
+        </figure>
+
+      </div>
+    </div>
+  </section>
+
 </div>
 
 <script src="{{ '/assets/js/gallery.js' | relative_url }}" defer></script>

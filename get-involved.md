@@ -83,6 +83,39 @@ page_class: get-involved-page
     </div>
   </section>
 
+  <!-- ===== GBM PHOTOS ===== -->
+  <section class="gi-gbm" aria-labelledby="gi-gbm-title">
+    <div class="gi-section-inner">
+
+      <div class="gi-section-header">
+        <span class="section-label">INSIDE THE CHAPTER</span>
+        <h2 id="gi-gbm-title" class="gi-section-heading">See What a Meeting Looks Like</h2>
+      </div>
+
+      <div class="gi-gbm-grid">
+
+        <figure class="gi-gbm-card" data-animate>
+          <img
+            src="{{ '/assets/img/gbm/2023-PVSHPE-GBM.png' | relative_url }}"
+            alt="SHPE PVAMU General Body Meeting, 2023"
+            loading="lazy" width="800" height="600"
+          >
+          <figcaption class="gi-gbm-caption">General Body Meeting — 2023</figcaption>
+        </figure>
+
+        <figure class="gi-gbm-card" data-animate style="--delay: 0.08s">
+          <img
+            src="{{ '/assets/img/gbm/2026-1stSpringGBMPic.jpeg' | relative_url }}"
+            alt="SHPE PVAMU 1st Spring General Body Meeting, 2026"
+            loading="lazy" width="800" height="600"
+          >
+          <figcaption class="gi-gbm-caption">1st Spring General Body Meeting — 2026</figcaption>
+        </figure>
+
+      </div>
+    </div>
+  </section>
+
   <!-- ===== HOW TO JOIN ===== -->
   <section id="membership-steps" class="gi-steps" aria-labelledby="gi-steps-title">
     <div class="gi-section-inner">

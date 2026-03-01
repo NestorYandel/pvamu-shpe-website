@@ -51,7 +51,72 @@ page_class: sponsorshpe-page
     </div>
   </section>
 
-  <!-- ── 3. WHY SPONSOR ─────────────────────────────── -->
+  <!-- ── 3. CONVENTION GALLERY ────────────────────────── -->
+  <section class="sp-conv" aria-labelledby="sp-conv-title">
+    <div class="sp-section-inner">
+
+      <div class="sp-section-header">
+        <p class="sp-section-label">AT THE CONVENTION</p>
+        <h2 id="sp-conv-title" class="sp-section-heading">From the Convention Floor</h2>
+        <p class="sp-section-sub">Your sponsorship sends our students to the largest gathering of Hispanic STEM professionals in the country — the SHPE National Convention.</p>
+      </div>
+
+      <div class="sp-conv-grid">
+
+        <figure class="sp-conv-card" data-animate>
+          <img
+            src="{{ '/assets/img/convention/2021-SHPENationalConvention.png' | relative_url }}"
+            alt="PVAMU SHPE at the National Convention, 2021"
+            loading="lazy" width="600" height="400"
+          >
+          <figcaption class="sp-conv-caption">National Convention — 2021</figcaption>
+        </figure>
+
+        <figure class="sp-conv-card" data-animate style="--delay: 0.08s">
+          <img
+            src="{{ '/assets/img/convention/2023-PVSHPE-NationalConvention.png' | relative_url }}"
+            alt="PVAMU SHPE at the National Convention, 2023"
+            loading="lazy" width="600" height="400"
+          >
+          <figcaption class="sp-conv-caption">National Convention — 2023</figcaption>
+        </figure>
+
+        <figure class="sp-conv-card" data-animate style="--delay: 0.16s">
+          <img
+            src="{{ '/assets/img/convention/2024Fall-SHPENationalConvention.png' | relative_url }}"
+            alt="PVAMU SHPE at the National Convention, Fall 2024"
+            loading="lazy" width="600" height="400"
+          >
+          <figcaption class="sp-conv-caption">National Convention — Fall 2024</figcaption>
+        </figure>
+
+        <div class="sp-conv-bottom">
+
+          <figure class="sp-conv-card" data-animate style="--delay: 0s">
+            <img
+              src="{{ '/assets/img/convention/2025-SHPE-NationalConference-FamiliaPic.JPEG' | relative_url }}"
+              alt="PVAMU SHPE familia at the National Conference, 2025"
+              loading="lazy" width="600" height="400"
+            >
+            <figcaption class="sp-conv-caption">La Familia — 2025</figcaption>
+          </figure>
+
+          <figure class="sp-conv-card" data-animate style="--delay: 0.08s">
+            <img
+              src="{{ '/assets/img/convention/2025-SHPE-nationalConference-FlagPic.JPEG' | relative_url }}"
+              alt="PVAMU SHPE representing at the National Conference, 2025"
+              loading="lazy" width="600" height="400"
+            >
+            <figcaption class="sp-conv-caption">Representing PVAMU — 2025</figcaption>
+          </figure>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── 4. WHY SPONSOR ─────────────────────────────── -->
   <section class="sp-why" aria-labelledby="sp-why-title">
     <div class="sp-section-inner">
       <div class="sp-section-header">
