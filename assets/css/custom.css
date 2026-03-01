@@ -3292,213 +3292,70 @@ a.ofb-panel-meta-text:hover {
 }
 
 /* =============================================================
-   GALLERY PAGE
+   GALLERY PAGE — masonry photo dump
    ============================================================= */
 
-/* ── Hero banner ── */
+/* Reduce the default page-content top padding and kill the
+   container max-width so the grid goes edge-to-edge */
+.gallery-page .page-content {
+  padding-top: 72px;
+  padding-bottom: 0;
+}
 
-.gl-hero {
-  margin-top: -110px;
-  padding-top: calc(110px + 4.5rem);
-  padding-bottom: 5rem;
+.gallery-page .page-content > .container {
+  max-width: none;
+  padding: 0;
+}
+
+/* Full-bleed masonry column layout */
+.gl-masonry-wrap {
   width: 100vw;
   margin-left: calc(50% - 50vw);
-  background: linear-gradient(135deg, var(--color-purple) 0%, #3d1f5e 100%);
-  text-align: center;
-  color: var(--color-white);
-  position: relative;
+  columns: 4;
+  column-gap: 6px;
+  padding: 6px;
+}
+
+/* Each figure: prevent column breaks inside, gap below */
+.gl-item {
+  margin: 0 0 6px;
+  break-inside: avoid;
   overflow: hidden;
 }
 
-.gl-hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background:
-    radial-gradient(ellipse at 20% 50%, rgba(234,170,0,0.12) 0%, transparent 60%),
-    radial-gradient(ellipse at 80% 20%, rgba(255,255,255,0.06) 0%, transparent 55%);
-  pointer-events: none;
-}
-
-.gl-hero-inner {
-  position: relative;
-  max-width: var(--container-wide);
-  margin: 0 auto;
-  padding: 0 clamp(16px, 4vw, 64px);
-}
-
-.gl-hero-label {
-  color: var(--color-gold);
-  margin-bottom: 0.75rem;
-}
-
-.gl-hero-title {
-  font-size: clamp(2.4rem, 5vw, 3.8rem);
-  font-weight: 900;
-  line-height: 1.05;
-  letter-spacing: -0.02em;
-  margin-bottom: 1rem;
-  color: var(--color-white);
-}
-
-.gl-hero-subtitle {
-  font-size: clamp(1rem, 2vw, 1.2rem);
-  color: rgba(255, 255, 255, 0.82);
-  max-width: 52ch;
-  margin: 0 auto 1.5rem;
-  line-height: 1.6;
-}
-
-.gl-hero-divider {
-  width: 56px;
-  height: 4px;
-  background: var(--color-gold);
-  border-radius: 2px;
-  margin: 0 auto;
-}
-
-/* ── Main section ── */
-
-.gl-main {
-  width: 100vw;
-  margin-left: calc(50% - 50vw);
-  background: var(--color-surface);
-  padding: 70px 0 100px;
-}
-
-.gl-main-inner {
-  max-width: var(--container-wide);
-  margin: 0 auto;
-  padding: 0 clamp(16px, 4vw, 64px);
-}
-
-/* ── Filter buttons ── */
-
-.gl-filters {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.6rem;
-  justify-content: center;
-  margin-bottom: 3rem;
-}
-
-.gl-filter-btn {
-  padding: 0.5rem 1.25rem;
-  border-radius: 999px;
-  border: 2px solid var(--color-purple);
-  background: transparent;
-  color: var(--color-purple);
-  font-size: 0.88rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition:
-    background 0.2s ease,
-    color 0.2s ease,
-    border-color 0.2s ease;
-}
-
-.gl-filter-btn:hover {
-  background: rgba(88, 44, 131, 0.08);
-}
-
-.gl-filter-btn.is-active {
-  background: var(--color-purple);
-  color: var(--color-white);
-  border-color: var(--color-purple);
-}
-
-/* ── Photo grid ── */
-
-.gl-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 1.25rem;
-}
-
-/* ── Individual card ── */
-
-.gl-card {
-  margin: 0;
-  overflow: hidden;
-  border-radius: 12px;
-  box-shadow: var(--shadow-md);
-  transition:
-    transform 0.25s ease,
-    box-shadow 0.25s ease,
-    opacity 0.3s ease;
-  background: var(--color-surface);
-}
-
-.gl-card:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-lg);
-}
-
-/* Hidden state when filtered out */
-.gl-card.is-hidden {
-  display: none;
-}
-
-/* Placeholder image area (replaced with <img> when real photos are added) */
-.gl-card-img {
+/* Placeholder block — solid neutral, sized by inline aspect-ratio */
+.gl-placeholder {
+  display: block;
   width: 100%;
-  aspect-ratio: 4 / 3;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
+  background: #d3d1cf;
 }
 
-/* When the placeholder is replaced with an <img> */
-.gl-card-img img {
+/* Real image (swap in when ready — replaces the placeholder div) */
+.gl-item img {
+  display: block;
   width: 100%;
-  height: 100%;
+  height: auto;
   object-fit: cover;
-  display: block;
 }
 
-.gl-card-caption {
-  display: block;
-  border-top: 3px solid var(--color-gold);
-  padding: 0.6rem 0.9rem;
-  font-size: 0.8rem;
-  font-weight: 600;
-  color: var(--color-text-muted);
-  letter-spacing: 0.02em;
-  line-height: 1.4;
+/* Subtle hover brightening */
+.gl-item:hover .gl-placeholder,
+.gl-item:hover img {
+  filter: brightness(1.06);
+  transition: filter 0.2s ease;
 }
 
 /* ── Responsive ── */
 
 @media (max-width: 1024px) {
-  .gl-grid {
-    grid-template-columns: repeat(3, 1fr);
+  .gl-masonry-wrap {
+    columns: 3;
   }
 }
 
-@media (max-width: 768px) {
-  .gl-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .gl-filters {
-    gap: 0.4rem;
-  }
-
-  .gl-filter-btn {
-    font-size: 0.82rem;
-    padding: 0.4rem 1rem;
+@media (max-width: 640px) {
+  .gl-masonry-wrap {
+    columns: 2;
   }
 }
 
-@media (max-width: 480px) {
-  .gl-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 0.75rem;
-  }
-
-  .gl-card-caption {
-    font-size: 0.75rem;
-    padding: 0.5rem 0.75rem;
-  }
-}
