@@ -11,14 +11,19 @@ hero_secondary_link: /about/
 
 
 <div class="home-sponsors">
-  <p class="home-sponsors-label">Our Sponsors</p>
-  <img
-    src="{{ '/assets/img/logos/centerpoint-energy-logo.png' | relative_url }}"
-    alt="CenterPoint Energy Logo"
-    loading="lazy"
-    class="home-sponsors-logo"
-  >
-  <p class="home-sponsors-thanks">Thank you for your continued support.</p>
+  <div class="home-sponsors-header">
+    <span class="home-sponsors-label">Our Sponsors</span>
+    <a href="{{ '/sponsorshpe/' | relative_url }}" class="home-sponsors-cta">Become a Sponsor</a>
+  </div>
+  <hr class="home-sponsors-rule">
+  <div class="home-sponsors-logos">
+    <img
+      src="{{ '/assets/img/logos/centerpoint-energy-logo.png' | relative_url }}"
+      alt="CenterPoint Energy Logo"
+      loading="lazy"
+      class="home-sponsors-logo"
+    >
+  </div>
 </div>
 
 <section class="events-intro">

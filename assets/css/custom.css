@@ -3388,33 +3388,70 @@ a.ofb-panel-meta-text:hover {
 .home-sponsors {
   width: 100vw;
   margin-left: calc(50% - 50vw);
-  background: var(--color-cream);
-  text-align: center;
-  padding: 2.25rem 1.5rem 2rem;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  background: var(--color-surface);
+  padding: 1rem 0 1.25rem;
+}
+
+.home-sponsors-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 1.5rem;
 }
 
 .home-sponsors-label {
-  font-size: 0.7rem;
-  font-weight: 700;
-  letter-spacing: 0.16em;
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--color-text-subtle);
-  margin: 0 0 1.1rem;
+}
+
+.home-sponsors-cta {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-purple);
+  text-decoration: none;
+  padding: 0.28rem 0.75rem;
+  background: var(--color-gold);
+  border-radius: 4px;
+  transition: background 0.15s;
+  white-space: nowrap;
+}
+
+.home-sponsors-cta:hover {
+  background: var(--color-gold-dark);
+}
+
+.home-sponsors-rule {
+  border: none;
+  border-top: 1px solid rgba(0, 0, 0, 0.09);
+  margin: 0.75rem 0 0;
+}
+
+.home-sponsors-logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.75rem 1.5rem 0;
 }
 
 .home-sponsors-logo {
-  max-width: 180px;
-  width: 100%;
-  height: auto;
+  max-height: 42px;
+  width: auto;
   display: block;
-  margin: 0 auto;
 }
 
-.home-sponsors-thanks {
-  font-size: 0.85rem;
-  color: var(--color-text-subtle);
-  margin: 0.9rem 0 0;
+@media (max-width: 480px) {
+  .home-sponsors-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
 }
 
 /* =============================================================
