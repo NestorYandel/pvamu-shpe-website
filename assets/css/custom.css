@@ -3295,6 +3295,28 @@ a.ofb-panel-meta-text:hover {
    GALLERY PAGE — masonry photo dump
    ============================================================= */
 
+/* ── Page title ── */
+.gl-page-header {
+  text-align: center;
+  padding: 2.5rem 1.5rem 2rem;
+  max-width: var(--container-max);
+  margin: 0 auto;
+}
+
+.gl-page-title {
+  font-size: clamp(2rem, 3.4vw, 2.9rem);
+  font-weight: 800;
+  color: var(--color-text);
+  letter-spacing: -0.01em;
+  margin: 0 0 0.6rem;
+}
+
+.gl-page-subtitle {
+  font-size: 1.05rem;
+  color: var(--color-text-muted);
+  margin: 0;
+}
+
 /* Reduce the default page-content top padding and kill the
    container max-width so the grid goes edge-to-edge */
 .gallery-page .page-content {

@@ -1,9 +1,14 @@
 ---
 layout: default
-title: Gallery
+title: Photo Album
 permalink: /gallery/
 page_class: gallery-page
 ---
+
+<div class="gl-page-header">
+  <h1 class="gl-page-title">Photo Album</h1>
+  <p class="gl-page-subtitle">A glimpse into life at SHPE PVAMU.</p>
+</div>
 
 <div class="gl-masonry-wrap">
   {% for file in site.static_files %}
