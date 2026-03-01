@@ -54,10 +54,10 @@
 
             <nav id="site-nav">
               <ul class="nav-links">
-                <li><a href="{{ '/' | relative_url }}">Home</a></li>
                 <li><a href="{{ '/about/' | relative_url }}">About</a></li>
                 <li><a href="{{ '/officers/' | relative_url }}">Officers</a></li>
                 <li><a href="{{ '/get-involved/' | relative_url }}">Get Involved</a></li>
+                <li><a href="{{ '/gallery/' | relative_url }}">Gallery</a></li>
                 <li><a href="{{ '/sponsorshpe/' | relative_url }}">SponsorSHPE</a></li>
               </ul>
             </nav>
@@ -66,12 +66,24 @@
         </div><!-- /.nav-bar -->
       </header>
 
-      <!-- HERO (only for pages that set hero: true in front matter) -->
+      <!-- HERO CAROUSEL (only for pages that set hero: true in front matter) -->
       {% if page.hero %}
-      <section
-        class="hero"
-        style="background-image: url('{{ page.hero_image | default: "/assets/img/Hero.png" | relative_url }}');"
-      >
+      <section class="hero hero-carousel-wrap" aria-label="Hero image carousel">
+
+        <!-- Slides — set background-image inline when real photos are ready -->
+        <div class="hero-carousel" id="hero-carousel">
+          <div class="hero-slide is-active" style="background-color: #3d1f5e;">
+            <!-- INSERT HERO IMAGE 1 HERE -->
+          </div>
+          <div class="hero-slide" style="background-color: #202a44;">
+            <!-- INSERT HERO IMAGE 2 HERE -->
+          </div>
+          <div class="hero-slide" style="background-color: #1a3535;">
+            <!-- INSERT HERO IMAGE 3 HERE -->
+          </div>
+        </div>
+
+        <!-- Hero text + buttons (identical to original) -->
         <div class="container hero-content">
           <div class="hero-text">
             <h1>{{ page.hero_title }}</h1>
@@ -86,7 +98,78 @@
             </div>
           </div>
         </div>
+
+        <!-- Previous / Next arrows -->
+        <button class="hero-arrow hero-arrow-prev" type="button" aria-label="Previous slide">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
+          </svg>
+        </button>
+        <button class="hero-arrow hero-arrow-next" type="button" aria-label="Next slide">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
+          </svg>
+        </button>
+
+        <!-- Dot indicators -->
+        <div class="hero-dots" role="tablist" aria-label="Carousel slide indicators">
+          <button class="hero-dot is-active" type="button" role="tab" aria-selected="true"  aria-label="Slide 1" data-slide="0"></button>
+          <button class="hero-dot"            type="button" role="tab" aria-selected="false" aria-label="Slide 2" data-slide="1"></button>
+          <button class="hero-dot"            type="button" role="tab" aria-selected="false" aria-label="Slide 3" data-slide="2"></button>
+        </div>
+
       </section>
+
+      <script>
+      (function () {
+        'use strict';
+        var carousel = document.getElementById('hero-carousel');
+        if (!carousel) return;
+        var slides   = carousel.querySelectorAll('.hero-slide');
+        var dots     = document.querySelectorAll('.hero-dot');
+        var prevBtn  = document.querySelector('.hero-arrow-prev');
+        var nextBtn  = document.querySelector('.hero-arrow-next');
+        var current  = 0;
+        var timer;
+        var INTERVAL = 5000;
+
+        function goTo(index) {
+          slides[current].classList.remove('is-active');
+          dots[current].classList.remove('is-active');
+          dots[current].setAttribute('aria-selected', 'false');
+          current = (index + slides.length) % slides.length;
+          slides[current].classList.add('is-active');
+          dots[current].classList.add('is-active');
+          dots[current].setAttribute('aria-selected', 'true');
+        }
+
+        function startAuto() {
+          clearInterval(timer);
+          timer = setInterval(function () { goTo(current + 1); }, INTERVAL);
+        }
+
+        if (prevBtn) prevBtn.addEventListener('click', function () { goTo(current - 1); startAuto(); });
+        if (nextBtn) nextBtn.addEventListener('click', function () { goTo(current + 1); startAuto(); });
+        dots.forEach(function (dot) {
+          dot.addEventListener('click', function () {
+            goTo(parseInt(this.dataset.slide, 10));
+            startAuto();
+          });
+        });
+
+        startAuto();
+
+        /* Pause on hover / focus */
+        var section = document.querySelector('.hero-carousel-wrap');
+        if (section) {
+          section.addEventListener('mouseenter', function () { clearInterval(timer); });
+          section.addEventListener('mouseleave', startAuto);
+          section.addEventListener('focusin',    function () { clearInterval(timer); });
+          section.addEventListener('focusout',   startAuto);
+        }
+      }());
+      </script>
+
       {% endif %}
 
       <!-- MAIN CONTENT -->

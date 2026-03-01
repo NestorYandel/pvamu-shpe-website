@@ -83,39 +83,6 @@ page_class: get-involved-page
     </div>
   </section>
 
-  <!-- ===== GBM PHOTOS ===== -->
-  <section class="gi-gbm" aria-labelledby="gi-gbm-title">
-    <div class="gi-section-inner">
-
-      <div class="gi-section-header">
-        <span class="section-label">INSIDE THE CHAPTER</span>
-        <h2 id="gi-gbm-title" class="gi-section-heading">See What a Meeting Looks Like</h2>
-      </div>
-
-      <div class="gi-gbm-grid">
-
-        <figure class="gi-gbm-card" data-animate>
-          <img
-            src="{{ '/assets/img/gbm/2023-PVSHPE-GBM.png' | relative_url }}"
-            alt="SHPE PVAMU General Body Meeting, 2023"
-            loading="lazy" width="800" height="600"
-          >
-          <figcaption class="gi-gbm-caption">General Body Meeting — 2023</figcaption>
-        </figure>
-
-        <figure class="gi-gbm-card" data-animate style="--delay: 0.08s">
-          <img
-            src="{{ '/assets/img/gbm/2026-1stSpringGBMPic.jpeg' | relative_url }}"
-            alt="SHPE PVAMU 1st Spring General Body Meeting, 2026"
-            loading="lazy" width="800" height="600"
-          >
-          <figcaption class="gi-gbm-caption">1st Spring General Body Meeting — 2026</figcaption>
-        </figure>
-
-      </div>
-    </div>
-  </section>
-
   <!-- ===== HOW TO JOIN ===== -->
   <section id="membership-steps" class="gi-steps" aria-labelledby="gi-steps-title">
     <div class="gi-section-inner">
@@ -234,70 +201,6 @@ page_class: get-involved-page
 
       <p class="gi-points-coming-soon">Full points breakdown will be announced at the start of each semester.</p>
 
-    </div>
-  </section>
-
-  <!-- ===== OTHER WAYS TO GET INVOLVED ===== -->
-  <section class="gi-ways" aria-labelledby="gi-ways-title">
-    <div class="gi-section-inner">
-      <div class="gi-section-header">
-        <span class="section-label">GET MORE INVOLVED</span>
-        <h2 id="gi-ways-title" class="gi-section-heading">More Ways to Contribute</h2>
-        <p class="gi-section-sub">Membership is just the beginning. There are countless ways to lead, serve, and leave your mark on SHPE PVAMU.</p>
-      </div>
-      <div class="gi-ways-grid">
-
-        <div class="gi-ways-card" data-animate>
-          <div class="gi-ways-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-          </div>
-          <div>
-            <h3 class="gi-ways-title">Run for Officer</h3>
-            <p class="gi-ways-desc">Lead the chapter and shape SHPE PVAMU's direction by running for a board officer position during annual elections. Officers drive the vision, culture, and impact of the chapter.</p>
-          </div>
-        </div>
-
-        <div class="gi-ways-card" data-animate style="--delay: 0.08s">
-          <div class="gi-ways-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>
-          </div>
-          <div>
-            <h3 class="gi-ways-title">Join a Committee</h3>
-            <p class="gi-ways-desc">Support the chapter behind the scenes by joining a committee — from event planning and social media to sponsorship outreach and academic initiatives.</p>
-          </div>
-        </div>
-
-        <div class="gi-ways-card" data-animate style="--delay: 0.16s">
-          <div class="gi-ways-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24"><path d="M16.5 3c-1.74 0-3.41.81-4.5 2.09C10.91 3.81 9.24 3 7.5 3 4.42 3 2 5.42 2 8.5c0 3.78 3.4 6.86 8.55 11.54L12 21.35l1.45-1.32C18.6 15.36 22 12.28 22 8.5 22 5.42 19.58 3 16.5 3zm-4.4 15.55l-.1.1-.1-.1C7.14 14.24 4 11.39 4 8.5 4 6.5 5.5 5 7.5 5c1.54 0 3.04.99 3.57 2.36h1.87C13.46 5.99 14.96 5 16.5 5c2 0 3.5 1.5 3.5 3.5 0 2.89-3.14 5.74-7.9 10.05z"/></svg>
-          </div>
-          <div>
-            <h3 class="gi-ways-title">Volunteer at Events</h3>
-            <p class="gi-ways-desc">Give back by volunteering at chapter events, campus outreach activities, and community service initiatives — and earn member points while doing it.</p>
-          </div>
-        </div>
-
-        <div class="gi-ways-card" data-animate style="--delay: 0s">
-          <div class="gi-ways-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24"><path d="M19 5h-2V3H7v2H5c-1.1 0-2 .9-2 2v1c0 2.55 1.92 4.63 4.39 4.94.63 1.5 1.98 2.63 3.61 2.96V19H7v2h10v-2h-4v-3.1c1.63-.33 2.98-1.46 3.61-2.96C19.08 12.63 21 10.55 21 8V7c0-1.1-.9-2-2-2zM5 8V7h2v3.82C5.84 10.4 5 9.3 5 8zm14 0c0 1.3-.84 2.4-2 2.82V7h2v1z"/></svg>
-          </div>
-          <div>
-            <h3 class="gi-ways-title">Compete at SHPE Competitions</h3>
-            <p class="gi-ways-desc">Represent SHPE PVAMU at regional and national SHPE competitions — from hackathons and engineering challenges to Science Olympiad and research showcases.</p>
-          </div>
-        </div>
-
-        <div class="gi-ways-card gi-ways-card--last" data-animate style="--delay: 0.08s">
-          <div class="gi-ways-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24"><path d="M12 3L1 9l11 6 9-4.91V17h2V9L12 3zm-4 8.82v2.36L12 16l4-1.82v-2.36L12 14l-4-2.18zM5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82z"/></svg>
-          </div>
-          <div>
-            <h3 class="gi-ways-title">Mentorship &amp; Outreach</h3>
-            <p class="gi-ways-desc">Inspire the next generation by participating in K–12 STEM outreach programs and peer mentorship initiatives in the Prairie View community and beyond.</p>
-          </div>
-        </div>
-
-      </div>
     </div>
   </section>
 
