@@ -3381,3 +3381,98 @@ a.ofb-panel-meta-text:hover {
   }
 }
 
+/* =============================================================
+   HOME PAGE — sponsor strip
+   ============================================================= */
+
+.home-sponsors {
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  background: var(--color-cream);
+  text-align: center;
+  padding: 2.25rem 1.5rem 2rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.home-sponsors-label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--color-text-subtle);
+  margin: 0 0 1.1rem;
+}
+
+.home-sponsors-logo {
+  max-width: 180px;
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.home-sponsors-thanks {
+  font-size: 0.85rem;
+  color: var(--color-text-subtle);
+  margin: 0.9rem 0 0;
+}
+
+/* =============================================================
+   SPONSORSHPE PAGE — current sponsors section
+   ============================================================= */
+
+.sp-current-sponsors {
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  background: var(--color-surface);
+  padding: 5rem 1.5rem;
+}
+
+.sp-sponsors-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  margin-top: 0;
+}
+
+.sp-sponsor-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 2rem 2.5rem;
+  background: var(--color-cream);
+  border-radius: 12px;
+  border: 1px solid rgba(0, 0, 0, 0.07);
+  min-width: 220px;
+  max-width: 280px;
+}
+
+.sp-sponsor-logo {
+  max-width: 160px;
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.sp-sponsor-name {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--color-text);
+  margin: 0;
+  text-align: center;
+}
+
+.sp-sponsor-badge {
+  display: inline-block;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 0.25rem 0.65rem;
+  background: var(--color-gold);
+  color: var(--color-navy);
+  border-radius: 20px;
+}
+

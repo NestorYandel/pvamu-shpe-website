@@ -10,6 +10,17 @@ hero_secondary_link: /about/
 ---
 
 
+<div class="home-sponsors">
+  <p class="home-sponsors-label">Our Sponsors</p>
+  <img
+    src="{{ '/assets/img/logos/centerpoint-energy-logo.png' | relative_url }}"
+    alt="CenterPoint Energy Logo"
+    loading="lazy"
+    class="home-sponsors-logo"
+  >
+  <p class="home-sponsors-thanks">Thank you for your continued support.</p>
+</div>
+
 <section class="events-intro">
   <div class="container events-intro-content" data-animate>
     <span class="section-label">UPCOMING EVENTS</span>

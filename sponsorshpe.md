@@ -289,7 +289,30 @@ page_class: sponsorshpe-page
     </div>
   </section>
 
-  <!-- ── 7. THANK YOU ───────────────────────────────── -->
+  <!-- ── 7. OUR SPONSORS ───────────────────────────── -->
+  <section class="sp-current-sponsors" aria-labelledby="sp-sponsors-title">
+    <div class="sp-section-inner">
+      <div class="sp-section-header">
+        <p class="sp-section-label">RECOGNIZED PARTNERS</p>
+        <h2 id="sp-sponsors-title" class="sp-section-heading">Our Sponsors</h2>
+        <p class="sp-section-sub">We are proud to be supported by the following organizations.</p>
+      </div>
+      <div class="sp-sponsors-grid">
+        <div class="sp-sponsor-card" data-animate>
+          <img
+            src="{{ '/assets/img/logos/centerpoint-energy-logo.png' | relative_url }}"
+            alt="CenterPoint Energy Logo"
+            loading="lazy"
+            class="sp-sponsor-logo"
+          >
+          <p class="sp-sponsor-name">CenterPoint Energy</p>
+          <span class="sp-sponsor-badge">Past Sponsor</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── 8. THANK YOU ───────────────────────────────── -->
   <section class="sp-thanks" aria-labelledby="sp-thanks-title">
     <div class="sp-thanks-inner">
       <h2 id="sp-thanks-title" class="sp-thanks-heading">Thank You</h2>
