@@ -88,8 +88,8 @@ page_class: get-involved-page
     <div class="gi-section-inner">
       <div class="gi-section-header">
         <span class="section-label">HOW TO JOIN</span>
-        <h2 id="gi-steps-title" class="gi-section-heading">Become a Member in 5 Steps</h2>
-        <p class="gi-section-sub">Joining is straightforward — follow these steps and you'll be part of the familia in no time.</p>
+        <h2 id="gi-steps-title" class="gi-section-heading gi-heading-light">Become a Member in 5 Steps</h2>
+        <p class="gi-section-sub gi-sub-light">Joining is straightforward — follow these steps and you'll be part of the familia in no time.</p>
       </div>
       <ol class="gi-steps-list" aria-label="Membership steps">
 
@@ -122,9 +122,14 @@ page_class: get-involved-page
           <div class="gi-step-content">
             <h3 class="gi-step-title">Fill Out the Chapter Registration Form</h3>
             <p class="gi-step-desc">Complete the SHPE PVAMU chapter registration form so we can add you to our official roster and keep you informed about events, opportunities, and updates throughout the semester.</p>
-            <button class="btn btn-gold gi-step-btn" type="button" disabled>
-              Chapter Form — Link Coming Soon
-            </button>
+            <a
+              href="https://docs.google.com/forms/d/e/1FAIpQLSe6ezFJ0MN2-QtHNhtDwmIlowQrcEdTQMqWEFuLr7ByU55MOg/viewform?usp=publish-editor"
+              class="btn btn-gold gi-step-btn"
+              target="_blank"
+              rel="noopener"
+            >
+              Chapter Registration Form
+            </a>
           </div>
         </li>
 
@@ -140,8 +145,9 @@ page_class: get-involved-page
     </div>
   </section>
 
+  <!-- TEMPORARILY HIDDEN - Remove .temporary-hide class to restore -->
   <!-- ===== MEMBER POINTS TEASER ===== -->
-  <section class="gi-points" aria-labelledby="gi-points-title">
+  <section class="gi-points temporary-hide" aria-labelledby="gi-points-title">
     <div class="gi-section-inner">
 
       <div class="gi-section-header">

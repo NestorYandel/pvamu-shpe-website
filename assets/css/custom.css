@@ -1827,11 +1827,20 @@ body:not(.home-page) .site-header {
 
 /* ── Membership Steps ── */
 
+.temporary-hide {
+  display: none !important;
+}
+
 .gi-steps {
-  background: var(--color-surface);
+  background: var(--color-navy);
   width: 100vw;
   margin-left: calc(50% - 50vw);
   padding: 90px 0;
+}
+
+.gi-steps .gi-step-number {
+  background: var(--color-gold);
+  color: var(--color-navy);
 }
 
 .gi-steps-list {
