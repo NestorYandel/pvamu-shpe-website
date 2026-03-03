@@ -43,10 +43,6 @@ page_class: sponsorshpe-page
           <span class="sp-stat-number">8+</span>
           <span class="sp-stat-label">Events Per Semester</span>
         </div>
-        <div class="sp-stat-card" data-animate style="--delay:0.3s">
-          <span class="sp-stat-number">10+</span>
-          <span class="sp-stat-label">Industry Partners</span>
-        </div>
       </div>
     </div>
   </section>
@@ -112,96 +108,7 @@ page_class: sponsorshpe-page
     </div>
   </section>
 
-  <!-- ── 4. SPONSORSHIP TIERS ───────────────────────── -->
-  <section class="sp-tiers" aria-labelledby="sp-tiers-title">
-    <div class="sp-section-inner">
-      <div class="sp-section-header">
-        <p class="sp-section-label sp-label-light">SPONSORSHIP LEVELS</p>
-        <h2 id="sp-tiers-title" class="sp-section-heading sp-heading-light">Choose Your Investment Level</h2>
-        <p class="sp-section-sub sp-sub-light">All sponsorships support SHPE PVAMU for one full academic year.</p>
-      </div>
-      <div class="sp-tiers-grid">
-
-        <!-- Bronce -->
-        <div class="sp-tier-card" data-animate>
-          <div class="sp-tier-header sp-tier-header--bronce">
-            <span class="sp-tier-metal">Bronze</span>
-            <span class="sp-tier-price">$250</span>
-          </div>
-          <ul class="sp-tier-benefits">
-            <li>Logo on chapter website</li>
-            <li>Recognition at chapter meetings</li>
-            <li>Thank-you on social media</li>
-          </ul>
-          <a href="#sp-contact" class="btn btn-outline-purple sp-tier-btn">Get Started</a>
-        </div>
-
-        <!-- Plata -->
-        <div class="sp-tier-card" data-animate style="--delay:0.1s">
-          <div class="sp-tier-header sp-tier-header--plata">
-            <span class="sp-tier-metal">Silver</span>
-            <span class="sp-tier-price">$500</span>
-          </div>
-          <ul class="sp-tier-benefits">
-            <li>Logo on chapter website</li>
-            <li>Recognition at chapter meetings</li>
-            <li>Thank-you on social media</li>
-            <li class="sp-tier-inherited">Logo on event materials</li>
-            <li class="sp-tier-inherited">1 recruiting table at chapter event</li>
-            <li class="sp-tier-inherited">Mention in chapter newsletter</li>
-          </ul>
-          <a href="#sp-contact" class="btn btn-outline-purple sp-tier-btn">Get Started</a>
-        </div>
-
-        <!-- Oro (featured) -->
-        <div class="sp-tier-card sp-tier-card--featured" data-animate style="--delay:0.2s">
-          <div class="sp-tier-badge">Most Popular</div>
-          <div class="sp-tier-header sp-tier-header--oro">
-            <span class="sp-tier-metal">Gold</span>
-            <span class="sp-tier-price">$1,000</span>
-          </div>
-          <ul class="sp-tier-benefits">
-            <li>Logo on chapter website</li>
-            <li>Recognition at chapter meetings</li>
-            <li>Thank-you on social media</li>
-            <li>Logo on event materials</li>
-            <li>2 recruiting tables at chapter events</li>
-            <li>Mention in chapter newsletter</li>
-            <li class="sp-tier-inherited">Featured logo on website</li>
-            <li class="sp-tier-inherited">Speaking opportunity at 1 event</li>
-            <li class="sp-tier-inherited">Resume book access</li>
-          </ul>
-          <a href="#sp-contact" class="btn btn-gold sp-tier-btn">Get Started</a>
-        </div>
-
-        <!-- Diamante -->
-        <div class="sp-tier-card" data-animate style="--delay:0.3s">
-          <div class="sp-tier-header sp-tier-header--diamante">
-            <span class="sp-tier-metal">Diamond</span>
-            <span class="sp-tier-price">$2,000</span>
-          </div>
-          <ul class="sp-tier-benefits">
-            <li>Logo on chapter website</li>
-            <li>Recognition at chapter meetings</li>
-            <li>Thank-you on social media</li>
-            <li>Logo on event materials</li>
-            <li>4 recruiting tables at chapter events</li>
-            <li>Mention in chapter newsletter</li>
-            <li>Featured logo on website</li>
-            <li>Speaking opportunity at 2 events</li>
-            <li>Resume book access</li>
-            <li class="sp-tier-inherited">Title sponsorship of 1 major event</li>
-            <li class="sp-tier-inherited">Featured in all marketing materials</li>
-            <li class="sp-tier-inherited">Dedicated student engagement session</li>
-          </ul>
-          <a href="#sp-contact" class="btn btn-outline-purple sp-tier-btn">Get Started</a>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ── 5. WHAT YOUR SPONSORSHIP FUNDS ─────────────── -->
+  <!-- ── 4. WHAT YOUR SPONSORSHIP FUNDS ─────────────── -->
   <section class="sp-funds" aria-labelledby="sp-funds-title">
     <div class="sp-section-inner">
       <div class="sp-section-header">
@@ -261,8 +168,8 @@ page_class: sponsorshpe-page
       <div class="sp-contact-grid">
 
         <div class="sp-contact-text">
-          <p class="sp-section-label">LET'S PARTNER</p>
-          <h2 id="sp-contact-title" class="sp-section-heading sp-contact-heading">Ready to Make an Impact?</h2>
+          <p class="sp-section-label sp-label-light">LET'S PARTNER</p>
+          <h2 id="sp-contact-title" class="sp-section-heading sp-heading-light sp-contact-heading">Ready to Make an Impact?</h2>
           <p class="sp-contact-body">
             We'd love to discuss how your organization can partner with SHPE PVAMU.
             Reach out to our team and we'll respond within two business days.
@@ -295,7 +202,7 @@ page_class: sponsorshpe-page
       <div class="sp-section-header">
         <p class="sp-section-label">RECOGNIZED PARTNERS</p>
         <h2 id="sp-sponsors-title" class="sp-section-heading">Our Sponsors</h2>
-        <p class="sp-section-sub">We are proud to be supported by the following organizations.</p>
+        <p class="sp-section-sub">We are proud to have been supported by the following organizations.</p>
       </div>
       <div class="sp-sponsors-grid">
         <div class="sp-sponsor-card" data-animate>
@@ -306,7 +213,6 @@ page_class: sponsorshpe-page
             class="sp-sponsor-logo"
           >
           <p class="sp-sponsor-name">CenterPoint Energy</p>
-          <span class="sp-sponsor-badge">Past Sponsor</span>
         </div>
       </div>
     </div>

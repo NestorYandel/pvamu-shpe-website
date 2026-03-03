@@ -2329,8 +2329,10 @@ details.gi-faq-item[open] summary::after {
 
 .sp-stats-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
+  max-width: 860px;
+  margin: 0 auto;
 }
 
 .sp-stat-card {
@@ -2636,8 +2638,12 @@ details.gi-faq-item[open] summary::after {
 .sp-contact {
   width: 100vw;
   margin-left: calc(50% - 50vw);
-  background: var(--color-cream);
+  background: var(--color-navy);
   padding: 5rem 1.5rem 6rem;
+}
+
+.sp-contact .sp-contact-body {
+  color: rgba(255, 255, 255, 0.75);
 }
 
 .sp-contact-grid {
