@@ -123,7 +123,7 @@ page_class: get-involved-page
             <h3 class="gi-step-title">Fill Out the Chapter Registration Form</h3>
             <p class="gi-step-desc">Complete the SHPE PVAMU chapter registration form so we can add you to our official roster and keep you informed about events, opportunities, and updates throughout the semester.</p>
             <a
-              href="https://docs.google.com/forms/d/e/1FAIpQLSe6ezFJ0MN2-QtHNhtDwmIlowQrcEdTQMqWEFuLr7ByU55MOg/viewform?usp=publish-editor"
+              href="https://docs.google.com/forms/d/e/1FAIpQLSe6ezFJ0MN2-QtHNhtDwmIlowQrcEdTQMqWEFuLr7ByU55MOg/viewform"
               class="btn btn-gold gi-step-btn"
               target="_blank"
               rel="noopener"

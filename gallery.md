@@ -17,7 +17,7 @@ page_class: gallery-page
        or p contains "/assets/img/social/"
        or p contains "/assets/img/gbm/"
        or p contains "/assets/img/academic/"
-       or p contains "/assets/img/Service/" %}
+       or p contains "/assets/img/service/" %}
       {% assign ext = file.extname | downcase %}
       {% if ext == ".png" or ext == ".jpg" or ext == ".jpeg" or ext == ".gif" or ext == ".webp" %}
       <figure class="gl-item">

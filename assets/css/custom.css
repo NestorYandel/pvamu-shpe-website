@@ -52,13 +52,10 @@ body {
 }
 
 body {
-  overflow-x: hidden;
-}
-
-body {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   line-height: 1.5;
   color: var(--color-text);
+  overflow-x: hidden;
 }
 
 .site-shell {
@@ -256,6 +253,7 @@ body:not(.home-page) .site-header {
     rgba(15, 23, 42, 0.75),
     rgba(15, 23, 42, 0.4)
   );
+  z-index: 1;
 }
 
 .hero-content {
@@ -309,11 +307,6 @@ body:not(.home-page) .site-header {
 
 .hero-slide.is-active {
   opacity: 1;
-}
-
-/* Push the gradient overlay above the slides */
-.hero::before {
-  z-index: 1;
 }
 
 /* Push text content above the overlay */
@@ -552,282 +545,6 @@ body:not(.home-page) .site-header {
   height: 700px;
 }
 
-/* ===== EXECUTIVE BOARD SHOWCASE ===== */
-
-.eb-section {
-  width: 100vw;
-  margin-left: calc(50% - 50vw);
-  padding: 5.5rem 0 6.5rem;
-  background: var(--color-navy);
-}
-
-.eb-inner {
-  max-width: var(--container-wide);
-  margin: 0 auto;
-  padding: 0 1.5rem;
-}
-
-/* ── Section Header ── */
-
-.eb-header {
-  text-align: center;
-  margin-bottom: 4rem;
-}
-
-.eb-label {
-  display: inline-block;
-  font-size: 0.72rem;
-  font-weight: 700;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-  color: var(--color-gold);
-  margin-bottom: 0.75rem;
-}
-
-.eb-heading {
-  font-size: var(--heading-section);
-  font-weight: 800;
-  color: var(--color-white);
-  margin: 0;
-  line-height: 1.1;
-}
-
-.eb-heading::after {
-  content: "";
-  display: block;
-  width: 56px;
-  height: 4px;
-  background: var(--color-gold);
-  border-radius: 2px;
-  margin: 0.7rem auto 0;
-}
-
-.eb-subtitle {
-  font-size: 1.05rem;
-  color: rgba(255, 255, 255, 0.65);
-  margin: 1rem auto 0;
-  max-width: 48ch;
-  line-height: 1.6;
-}
-
-/* ── Grid ── */
-
-.eb-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 2rem;
-}
-
-/* Right-column cards get a slight delay for a staggered entrance */
-.eb-card:nth-child(even) {
-  --delay: 0.1s;
-}
-
-/* ── Card ── */
-
-.eb-card {
-  min-height: 520px;
-  border-radius: 16px;
-  overflow: hidden;
-  background: var(--color-surface);
-  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.32);
-  display: flex;
-  flex-direction: column;
-  transition:
-    transform 0.3s ease,
-    box-shadow 0.3s ease;
-}
-
-.eb-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 32px 64px rgba(0, 0, 0, 0.42);
-}
-
-/* Scroll fade-in — merged with hover so both work after reveal */
-.eb-card[data-animate] {
-  opacity: 0;
-  transform: translateY(32px);
-  transition:
-    opacity 0.65s ease var(--delay, 0s),
-    transform 0.65s ease var(--delay, 0s),
-    box-shadow 0.3s ease;
-}
-
-.eb-card[data-animate].is-visible {
-  opacity: 1;
-  transform: none;
-}
-
-.eb-card[data-animate].is-visible:hover {
-  transform: translateY(-8px);
-}
-
-/* ── Portrait photo: 70% of card ── */
-
-.eb-photo {
-  flex: 0 0 360px;
-  position: relative;
-  overflow: hidden;
-  background: linear-gradient(
-    155deg,
-    var(--color-purple) 0%,
-    var(--color-purple-dark) 50%,
-    var(--color-navy) 100%
-  );
-}
-
-/* Real headshot */
-.eb-photo img {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center center;
-  display: block;
-  transition: transform 0.55s ease;
-}
-
-.eb-card:hover .eb-photo img {
-  transform: scale(1.04);
-}
-
-/* Placeholder when no photo is available */
-.eb-initials {
-  position: absolute;
-  inset: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 6rem;
-  font-weight: 800;
-  color: rgba(255, 255, 255, 0.22);
-  letter-spacing: 0.04em;
-  user-select: none;
-}
-
-/* ── Info panel: remainder of card ── */
-
-.eb-info {
-  flex: 1;
-  padding: 1.6rem 1.75rem 1.75rem;
-  display: flex;
-  flex-direction: column;
-  border-top: 3px solid var(--color-gold);
-  background: var(--color-surface);
-}
-
-.eb-name {
-  font-size: 1.3rem;
-  font-weight: 800;
-  color: var(--color-text);
-  margin: 0 0 0.3rem;
-  line-height: 1.2;
-}
-
-.eb-title {
-  font-size: 0.73rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.13em;
-  color: var(--color-gold);
-  margin: 0;
-}
-
-.eb-class {
-  font-size: 0.87rem;
-  color: var(--color-text-subtle);
-  margin: 0.65rem 0 0;
-  font-style: italic;
-}
-
-.eb-email {
-  display: inline-block;
-  margin-top: auto;
-  padding-top: 0.75rem;
-  font-size: 0.84rem;
-  font-weight: 600;
-  color: var(--color-purple);
-  text-decoration: none;
-  word-break: break-all;
-}
-
-.eb-email:hover {
-  color: var(--color-purple-dark);
-  text-decoration: underline;
-}
-
-.eb-linkedin {
-  display: inline-block;
-  margin-top: 0.45rem;
-  font-size: 0.8rem;
-  font-weight: 600;
-  color: var(--color-text-subtle);
-  text-decoration: none;
-}
-
-.eb-linkedin:hover {
-  color: var(--color-purple);
-  text-decoration: underline;
-}
-
-.eb-bio {
-  font-size: 0.82rem;
-  color: var(--color-text-subtle);
-  margin-top: 0.75rem;
-  line-height: 1.55;
-  font-style: italic;
-}
-
-/* ── Responsive ── */
-
-@media (max-width: 960px) {
-  .eb-grid {
-    gap: 1.5rem;
-  }
-
-  .eb-photo {
-    flex: 0 0 300px;
-  }
-
-  .eb-card {
-    min-height: 450px;
-  }
-}
-
-@media (max-width: 640px) {
-  .eb-grid {
-    grid-template-columns: 1fr;
-    max-width: 440px;
-    margin: 0 auto;
-  }
-
-  .eb-card {
-    min-height: 480px;
-  }
-
-  .eb-photo {
-    flex: 0 0 320px;
-  }
-
-  .eb-card:nth-child(even) {
-    --delay: 0s;
-  }
-}
-
-@media (max-width: 400px) {
-  .eb-photo {
-    flex: 0 0 260px;
-  }
-
-  .eb-card {
-    min-height: 420px;
-  }
-
-  .eb-name {
-    font-size: 1.1rem;
-  }
-}
 
 /* ===== CONNECT SECTION ===== */
 
@@ -2343,14 +2060,6 @@ details.gi-faq-item[open] summary::after {
   display: flex;
   flex-direction: column;
   gap: 0.4rem;
-  opacity: 0;
-  transform: translateY(18px);
-  transition: opacity 0.5s ease var(--delay, 0s), transform 0.5s ease var(--delay, 0s);
-}
-
-.sp-stat-card.is-visible {
-  opacity: 1;
-  transform: none;
 }
 
 .sp-stat-number {
@@ -2387,14 +2096,7 @@ details.gi-faq-item[open] summary::after {
   border-radius: 10px;
   padding: 2rem 1.75rem;
   box-shadow: var(--shadow-md);
-  opacity: 0;
-  transform: translateY(18px);
-  transition: opacity 0.5s ease var(--delay, 0s), transform 0.5s ease var(--delay, 0s), box-shadow 0.25s;
-}
-
-.sp-why-card.is-visible {
-  opacity: 1;
-  transform: none;
+  transition: box-shadow 0.25s;
 }
 
 .sp-why-card.is-visible:hover {
@@ -2432,144 +2134,6 @@ details.gi-faq-item[open] summary::after {
   line-height: 1.65;
 }
 
-/* ── 4. SPONSORSHIP TIERS ────────────────────────────── */
-.sp-tiers {
-  width: 100vw;
-  margin-left: calc(50% - 50vw);
-  background: var(--color-navy);
-  padding: 5rem 1.5rem 6.5rem;
-}
-
-.sp-tiers-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 1.5rem;
-  align-items: start;
-}
-
-.sp-tier-card {
-  background: var(--color-white);
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: var(--shadow-lg);
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.5s ease var(--delay, 0s), transform 0.5s ease var(--delay, 0s);
-}
-
-.sp-tier-card.is-visible {
-  opacity: 1;
-  transform: none;
-}
-
-.sp-tier-card--featured {
-  box-shadow: 0 24px 48px rgba(15, 23, 42, 0.32);
-}
-
-.sp-tier-card--featured.is-visible {
-  transform: translateY(-8px);
-}
-
-.sp-tier-badge {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  background: var(--color-gold);
-  color: var(--color-navy);
-  font-size: 0.68rem;
-  font-weight: 800;
-  letter-spacing: 0.09em;
-  text-transform: uppercase;
-  padding: 0.3rem 1.1rem;
-  border-radius: 0 0 6px 6px;
-  z-index: 1;
-  white-space: nowrap;
-}
-
-.sp-tier-header {
-  padding: 1.75rem 1.5rem 1.25rem;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  gap: 0.3rem;
-}
-
-.sp-tier-header--bronce {
-  background: linear-gradient(135deg, #a0522d, #cd7f32);
-}
-
-.sp-tier-header--plata {
-  background: linear-gradient(135deg, #708090, #a8a9ad);
-}
-
-.sp-tier-header--oro {
-  background: linear-gradient(135deg, var(--color-gold-dark), var(--color-gold));
-}
-
-.sp-tier-header--diamante {
-  background: linear-gradient(135deg, var(--color-navy), #2e3f6e);
-}
-
-.sp-tier-metal {
-  font-size: 1rem;
-  font-weight: 800;
-  color: var(--color-white);
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
-
-.sp-tier-price {
-  font-size: clamp(1.8rem, 2.5vw, 2.2rem);
-  font-weight: 900;
-  color: var(--color-white);
-  line-height: 1;
-}
-
-.sp-tier-benefits {
-  list-style: none;
-  padding: 1.25rem 1.5rem;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-.sp-tier-benefits li {
-  font-size: 0.87rem;
-  color: var(--color-text);
-  padding-left: 1.35rem;
-  position: relative;
-  line-height: 1.45;
-}
-
-.sp-tier-benefits li::before {
-  content: '✓';
-  position: absolute;
-  left: 0;
-  color: var(--color-purple);
-  font-weight: 700;
-}
-
-.sp-tier-inherited {
-  border-top: 1px dashed #e2e8f0;
-  padding-top: 0.5rem;
-  margin-top: 0.1rem;
-}
-
-.sp-tier-inherited::before {
-  content: '+' !important;
-  color: var(--color-gold-dark) !important;
-}
-
-.sp-tier-btn {
-  display: block;
-  margin: 0 1.5rem 1.5rem;
-  text-align: center;
-}
 
 /* ── 5. FUNDS ────────────────────────────────────────── */
 .sp-funds {
@@ -2592,14 +2156,6 @@ details.gi-faq-item[open] summary::after {
   display: flex;
   gap: 1.25rem;
   align-items: flex-start;
-  opacity: 0;
-  transform: translateY(16px);
-  transition: opacity 0.5s ease var(--delay, 0s), transform 0.5s ease var(--delay, 0s);
-}
-
-.sp-fund-card.is-visible {
-  opacity: 1;
-  transform: none;
 }
 
 .sp-fund-icon {
@@ -2706,14 +2262,6 @@ details.gi-faq-item[open] summary::after {
 
 /* ── SPONSORSHPE RESPONSIVE ──────────────────────────── */
 @media (max-width: 1024px) {
-  .sp-tiers-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .sp-tier-card--featured.is-visible {
-    transform: none;
-  }
-
   .sp-why-grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -2747,10 +2295,6 @@ details.gi-faq-item[open] summary::after {
 }
 
 @media (max-width: 640px) {
-  .sp-tiers-grid {
-    grid-template-columns: 1fr;
-  }
-
   .sp-why-grid {
     grid-template-columns: 1fr;
   }

@@ -111,11 +111,7 @@ page_class: officers-page
 
             <div class="ofb-panel-bio-block">
               <span class="ofb-panel-bio-label">About</span>
-              {% if officer.name == "Bryan Perez" %}
-                <p class="ofb-panel-bio">Bryan Perez is a senior Computer Science student at Prairie View A&amp;M University with a passion for leadership and community building. As President of SHPE PVAMU, he is committed to creating opportunities for Hispanic students in STEM and growing the chapter into a powerful resource for members. Outside of SHPE, Bryan enjoys networking, mentorship, and giving back to his community.</p>
-              {% else %}
-                <p class="ofb-panel-bio">Bio coming soon. Check back for updates.</p>
-              {% endif %}
+              <p class="ofb-panel-bio">{{ officer.bio | default: "Bio coming soon. Check back for updates." }}</p>
             </div>
 
           </div><!-- /.ofb-panel-info -->

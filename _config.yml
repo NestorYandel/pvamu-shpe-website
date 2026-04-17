@@ -1,15 +1,3 @@
-title: "Society of Hispanic Professional Engineers"
+title: "SHPE at Prairie View A&M University"
 description: "Official website of SHPE at Prairie View A&M University"
-theme: minima
 markdown: kramdown
-
-# Navigation links (we will use these later)
-nav:
-  - name: "Home"
-    link: "/"
-  - name: "About"
-    link: "/about/"
-  - name: "Get Involved"
-    link: "/get-involved/"
-  - name: "SponsorSHPE"
-    link: "/sponsorshpe/"

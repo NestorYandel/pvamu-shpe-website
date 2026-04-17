@@ -2,7 +2,6 @@
 layout: default
 title: Home
 hero: true
-hero_image: /assets/img/Hero.png
 hero_title: Society of Hispanic Professional Engineers
 hero_subtitle: Prairie View A&M University
 hero_secondary_text: Learn More
