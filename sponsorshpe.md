@@ -32,7 +32,7 @@ page_class: sponsorshpe-page
       </div>
       <div class="sp-stats-grid">
         <div class="sp-stat-card" data-animate>
-          <span class="sp-stat-number">40+</span>
+          <span class="sp-stat-number">15+</span>
           <span class="sp-stat-label">Active Members</span>
         </div>
         <div class="sp-stat-card" data-animate style="--delay:0.1s">
@@ -40,7 +40,7 @@ page_class: sponsorshpe-page
           <span class="sp-stat-label">Years at PVAMU</span>
         </div>
         <div class="sp-stat-card" data-animate style="--delay:0.2s">
-          <span class="sp-stat-number">8+</span>
+          <span class="sp-stat-number">5+</span>
           <span class="sp-stat-label">Events Per Semester</span>
         </div>
       </div>
