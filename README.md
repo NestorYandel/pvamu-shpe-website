@@ -1,2 +1,2 @@
-# pvamu-shpe-website
-Official Website for PVSHPE
+# SHPE at Prairie View A&M University
+Official Website for PVAMU SHPE
